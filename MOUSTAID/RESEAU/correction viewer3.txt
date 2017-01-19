@@ -1,0 +1,63 @@
+badya b 0 classe A
+badya b 10 classe B
+badya b 11 classe C
+
+------Q1-------
+classe C
+classe B
+
+------Q2-------
+10
+16
+
+----Q3--------
+3
+2
+1
+4/7
+
+-----Q4-------
+liaison
+présentation
+réseaux
+phisyque
+session
+application
+transport
+
+------------------------- Dossier 3------------------
+
+@IP 172.16.200.100   classe B
+
+-------Q1-----
+
+masque sous réseaux 255.255.0.0
+
+-----Q2-----
+
+la taille hiya (2 os 11)-2=2046 (11)3rafnaha mn 3adad lbit li b9aw f partie dyal lhote 
+mn ba3d ma 7ayedna partie dyal sous reseau
+
+--------Q4----
+
+255.255.255.0
+
+--------Q5----
+
+2 os 3= 8
+
+
+
+
+--------------
+
+230 kan7awloha l binaire katkhroj 8 bit 8 katektib b sighat 2 os 3
+idan partie dyal sous reseau hiya 3 bit btida2an mn partie dyal lhote
+
+
+
+
+
+
+
+
