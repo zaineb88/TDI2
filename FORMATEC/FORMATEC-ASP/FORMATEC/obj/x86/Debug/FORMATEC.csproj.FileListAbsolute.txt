@@ -1,0 +1,37 @@
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\bin\Debug\FORMATEC.exe.config
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\bin\Debug\FORMATEC.exe
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\bin\Debug\FORMATEC.pdb
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.Properties.Resources.resources
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.exe
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.pdb
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.Stage.resources
+C:\Users\ZIZI\documents\visual studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.Menu.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.Ajouter_Stage.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.Modifier_Stage.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.Session.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.Statistiques_Stage.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.Modifier_Session.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\FORMATEC\FORMATEC\obj\x86\Debug\FORMATEC.Ajouter_Session.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\bin\Debug\FORMATEC.exe.config
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.exe
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.pdb
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.Ajouter_Session.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.Ajouter_Stage.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.Menu.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.Modifier_Session.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.Modifier_Stage.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.Session.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.Stage.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.Statistiques_Stage.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\bin\Debug\FORMATEC.exe
+C:\Users\ZIZI\Desktop\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\bin\Debug\FORMATEC.pdb
+G:\TDI\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\bin\Debug\FORMATEC.exe.config
+G:\TDI\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.exe
+G:\TDI\TDI 2eme\FORMATEC\FORMATEC-ASP\FORMATEC\obj\x86\Debug\FORMATEC.pdb
