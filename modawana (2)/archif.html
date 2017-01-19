@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html PUBLIC >
+
+<head>
+
+<meta content='ar' name='language'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+<script type='text/javascript'>var thumbnail_mode = "no-float" ;
+    summary_noimg = 300; /* طول الملخص للمواضيع بدون صورة */
+    summary_img = 290; /* طول الملخص للمواضيع ذات صورة*/
+    img_thumb_height = 250; /* عرض الصورة في الملخص*/
+    img_thumb_width = 590; /*طول الصورة في الملخص */
+    </script>
+
+<script type='text/javascript'>
+//<![CDATA[
+function removeHtmlTag(strx,chop){ 
+	if(strx.indexOf("<")!=-1)
+	{
+		var s = strx.split("<"); 
+		for(var i=0;i<s.length;i++){ 
+			if(s[i].indexOf(">")!=-1){ 
+				s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length); 
+			} 
+		} 
+		strx =  s.join(""); 
+	}
+	chop = (chop < strx.length-1) ? chop : strx.length-2; 
+	while(strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++; 
+	strx = strx.substring(0,chop-1); 
+	return strx+'...'; 
+}
+
+function createremoveHtmlTag(pID){
+	var div = document.getElementById(pID);
+	var imgtag = "";
+	var img = div.getElementsByTagName("img");
+	var lis = liste_noimg;
+	if(img.length>=1) {	
+		imgtag = '<span style="float:right; padding:0px 0px 5px 5px;">
+        <img src="'+img[0].src+'" width="'+img_thumb_width+'px" 
+          height="'+img_thumb_height+'px"/></span>';
+		lis = liste_img;
+	}
+	
+	var liste = imgtag + '<div>' + removeHtmlTag(div.innerHTML,summ) + '</div>';
+	div.innerHTML = liste;
+}
+//]]>
+</script>
+
+
+
+<script type='text/javascript'>
+//<![CDATA[
+var scrollSpeed = 80;
+var current = 0;
+var direction = 'h';
+function bgscroll(){
+	current -= 2;
+	$('#bg_scroll').css("backgroundPosition", (direction == 'h') ? current+"px 0" :
+   "0 " + current+"px");
+}
+setInterval("bgscroll()", scrollSpeed);	
+$(function () {
+	$(".news").innerfade({
+		animationtype: 'slide',
+		speed: 1000,
+		timeout: 3000,
+		type: 'random',
+		containerheight: '30px'
+	});
+	var startSlide = 1;
+	$('#slides').slides({
+		preload: true,
+		preloadImage: '../images/loading.gif',
+		generatePagination: false,
+		play: 3000,
+		pause: 2500,
+		hoverPause: true,
+		container: 'slides_container',
+		start: startSlide
+	});
+	$(".menu a").removeAttr('title');
+	$(".menu ul").css({display:"none"});
+	$(".menu li").each(function(){	
+		var jQuerysubmeun = jQuery(this).find('ul:first');
+		$(this).hover(function(){	
+		jQuerysubmeun.stop().css({overflow:"hidden", height:"auto", display:"none", paddingTop:0}).slideDown(420, function(){
+		$(this).css({overflow:"visible", height:"auto"});
+	});	
+	},function(){	
+		jQuerysubmeun.stop().slideUp(250, function(){	
+		$(this).css({overflow:"hidden", display:"none"});
+	});
+	});	
+	});
+	
+	
+	$('#slides_mid').slides({
+		preload: true,
+		preloadImage: '../images/loading.gif',
+		play: 5000,
+		pause: 2500,
+		hoverPause: true,
+		generatePagination: true,
+		container: 'slides_mid_container',
+		animationStart: function(current){
+			$('.caption').css({bottom:-35});
+			if (window.console && console.log) {
+				console.log('animationStart on slide: ', current);
+			};
+		},
+		animationComplete: function(current){
+			$('.caption').css({bottom:1});
+			if (window.console && console.log) {
+				console.log('animationComplete on slide: ', current);
+			};
+		},
+		slidesLoaded: function() {
+			$('.caption').css({bottom:0});
+		}
+	});
+	$("#accordion li:first-child ul").css({"display":"block"});
+	
+	$("#accordion li:first-child a").addClass("current");
+	$("#accordion li ul li a").removeClass("current");
+	
+	$("#accordion li a").addClass("heading");
+	$("#accordion li ul li a").removeClass("heading");
+	//$('#accordion').accordion();
+	
+});
+
+$(window).load(function() {
+
+	//$(function(){$('img').mouseover(function(){$(this).fadeTo('400',0.50);$(this).
+fadeTo('400',1)})});
+$(function(){$('img.luay2011').mouseover(function(){$(this).animate({rotate:'40deg'});
+$(this).animate({rotate:'-=40deg'})})});$(function(){$('img.luay2012').
+mouseover(function(){$(this).animate({rotate:'40deg'});
+$(this).animate({rotate:'-=40deg'})})});
+	
+	setTimeout(
+	  function() {
+			var height_main_content = $("#main_content").delay(5000).outerHeight();
+			var height_right_sidebar = $("#right_sidebar").delay(5000).outerHeight();
+			var height_left_sidebar = $("#left_sidebar").delay(5000).outerHeight();
+			//alert(height_main_content);
+			
+			if (height_right_sidebar > height_main_content && height_right_sidebar > height_left_sidebar) {
+				$("#right_sidebar").css({"height":height_right_sidebar+20});
+				$("#left_sidebar").css({"height":height_right_sidebar+20});
+				$("#main_content").css({"height":height_right_sidebar});
+			}else if (height_left_sidebar > height_main_content && height_left_sidebar > height_right_sidebar) {
+				$("#right_sidebar").css({"height":height_left_sidebar+20});
+				$("#left_sidebar").css({"height":height_left_sidebar+20});
+				$("#main_content").css({"height":height_left_sidebar});
+			}else {
+				$("#left_sidebar").css({"height":height_main_content});
+				$("#right_sidebar").css({"height":height_main_content});
+			}
+	  },5000);
+	var offsetX = 50
+	var offsetY = -100
+
+	$('.pop-up-link').click(function(e) {
+		$(this).next().css({
+
+			"top" : e.pageY + offsetY + offsetY
+		}).css({
+			"left" : e.pageX + offsetX
+		}).fadeIn(500);
+		return false;
+	});
+
+	$(".close").click(function() {
+		$('.pop-up-link').next().fadeOut(500);
+		return false;
+	});
+	
+	var height_main_content = $("#main_content").delay(5000).outerHeight();
+	var height_right_sidebar = $("#right_sidebar").delay(5000).outerHeight();
+	var height_left_sidebar = $("#left_sidebar").delay(5000).outerHeight();
+	
+	
+	if (height_right_sidebar > height_main_content && height_right_sidebar >
+            height_left_sidebar) {
+		$("#right_sidebar").css({"height":height_right_sidebar+20});
+		$("#left_sidebar").css({"height":height_right_sidebar+20});
+		$("#main_content").css({"height":height_right_sidebar});
+	}else if (height_left_sidebar > height_main_content && height_left_sidebar > height_right_sidebar) {
+		$("#right_sidebar").css({"height":height_left_sidebar+20});
+		$("#left_sidebar").css({"height":height_left_sidebar+20});
+		$("#main_content").css({"height":height_left_sidebar});
+	}else {
+		$("#left_sidebar").css({"height":height_main_content});
+		$("#right_sidebar").css({"height":height_main_content});
+	}
+
+	$("ul#accordion .heading").click(function () {
+		$(this).toggleClass("current");
+		$(this).next("ul").slideToggle(500);
+		return false;
+	});
+	
+	
+	$("ul#accordion li ul a").hover(function () {
+		$(this).stop().animate({"margin-right":"10px"});
+	},function () {
+		$(this).stop().animate({"margin-right":"0"});
+	});
+
+	$(".post_left_cat li").hover(function () {
+		var post_id = $(this).attr("class");
+		var cat_id = $(this).attr("id");
+		$(".cat_post_"+cat_id+"_"+post_id).show();
+		$(".hide_post_"+cat_id).hide();
+	},function () {
+		var cat_id = $(this).attr("id");
+		$(".hide_post_"+cat_id).show();
+		$(".cat_post_"+cat_id).hide();
+	});
+	
+});
+//]]>
+</script>
+
+
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script>
+
+</head>
+
+<body>
+<div id='wrapper'>
+</div>
+<div id='outer-wrapper'>
+<!--header -->
+<div id='header' background="monica.jpg">
+<div id='logo'></div>
+<div id='slides'>
+<div class='slides_container'>
+<div class='slide'>
+<div class='img_slide'>
+<img class='attachment-post-thumbnail wp-post-image' height='180' 
+src='monica.jpg' width='950'/></div>
+<div class='content_slide'>
+
+</div>
+</div>
+
+
+<div class='colonne'>
+</div>
+
+<div class='colonne'>
+<div class='img_colonne'>
+</div>
+</div>
+</div>
+
+</div><!-- fin colonne -->
+</div>
+
+<!--/header -->
+
+
+
+<ul id='-menu'>
+<li><a href='modawana.html'>الـرئـيـسـيـة</a></li>
+<li><a href='islamiyat.html'>اسـلامـيـات</a>
+
+<ul><a href=''> مواضيع اسلامية متنوعة </a></li></ul>
+<li><a href='mawadi3ama.html'>مواضيع عامة</a>
+<ul>
+<li><a href=' '> مـواضيع عامة و مختلفة</a></li>
+</ul>
+</li>
+<li><a href="khawater.html">خـواطـر</a>
+<ul>
+<li><a href=''> إبداعاتي المتواضعة</a></li>
+</ul>
+</li>
+<li><a href='akhbar.html'>أخـبـار مـتـنـوعـة</a>
+<ul>
+<li>
+<a href=''>أهم الأخبار و المستجدات</a></li>
+</ul>
+</li>
+<li><a href='mokhtarat.html'>مـخـتـارات</a>
+<ul>
+<li>
+<a href=''>عبارات راقت لي</a></li>
+</ul>
+</li>
+
+<li><a href='islamiyat.html'>أرشـيـف </a>
+
+<ul><a href=''> أرشيف المدونة</a></li></ul>
+
+<li><a href='raselni.html'>   راسـلـنـي </a>
+<ul>
+<li>
+<a href=''>أهلا بالملاحظاتكم </a></li>
+</ul>
+</li>
+</ul>
+
+<script language="JavaScript">
+var sizes = new Array("0px", "1px", "2px", "3px", "4px");
+sizes.pos = 0;
+function elast() {
+var el = document.all.elastic;
+if (null == el.direction)
+   el.direction = 1;
+else if ((sizes.pos > sizes.length - 4) || (0 == sizes.pos))
+   el.direction *= -1;
+   el.style.letterSpacing = sizes[sizes.pos += el.direction];
+}
+setInterval('elast()', 100)
+</script>
+
+
+<div id='content-wrapper'>
+
+<div id='main-wrapper'>
+<div class='main section' id='main'>
+
+ <div class="date-outer">
+         
+        
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post'>
+<div class='medium_header'></div>
+<div class='medium_content'></div></div>
+<div class='post-title'>
+
+<h1><font color=#F96>
+ 
+لا يـوجـد أي أرشـيـف حـالـيـا</font>
+
+</h1></div>
+
+</div>
+
+<div class='post_date'>
+<div class='post-labels'>
+<div class='tag'>
+
+
+<script language="JavaScript">
+var sizes = new Array("0px", "1px", "2px", "3px", "4px");
+sizes.pos = 0;
+function elast() {
+var el = document.all.elastic;
+if (null == el.direction)
+   el.direction = 1;
+else if ((sizes.pos > sizes.length - 4) || (0 == sizes.pos))
+   el.direction *= -1;
+   el.style.letterSpacing = sizes[sizes.pos += el.direction];
+}
+setInterval('elast()', 100)
+</script>
+
+
+<script type='text/javascript'>createSummaryAndThumb("summary8674556496634577957");
+</script>
+</P>
+
+<div class='clear'></div>
+</div>
+</div>
+<div class='medium_content_footer_top'></div>
+<div class='post-footer'>
+
+
+
+</div>
+
+
+
+<div class='post-footer'>
+</div>
+
+
+
+
+
+
+
+<span class='post-location'>
+</span>
+</div>
+<div class='post-footer'>
+</div>
+<div class='medium_content_footer_bottom'></div>
+</div>
+</div>
+
+</div></div>
+</div>
+
+
+
+<script type="text/javascript">window.___gcfg = {'lang': 'ar'};</script>
+</div></div>
+</div>
+<div id='sidebar-wrapper'>
+<div class='widget' id='searchf'>
+<div class='widget-content'>
+
+
+</div>
+
+
+</br>
+
+
+<h2><font color=pink>أهلا و سهلا بكم
+</font></h2>
+
+
+<div class="textwidget"><marquee direction="up" width="300" onmouseover="this.stop()" 
+scrollamount="4" onmouseout="this.start()" height="200" align="left"><br /> 
+
+<img border="0" 
+ width="300" src="a.jpg" 
+height="250" />
+<br/>
+
+
+<img   width="300" src="b.jpg" height="200" />
+<br/>
+ 
+<img border="0" 
+ width="300" src="c.jpg" height="200" >
+<br/>
+
+<img border="0" width="300" src="d.jpg" 
+height="200" /></a>
+<br/>
+
+
+<img border="0"  width="300" src="e.jpg" 
+height="200" /></a>
+<br/>
+
+
+
+<p/></p></marquee></div>
+
+
+                </div><br>
+
+<h2><font color=pink>صفحتي على الفيسبوك
+</font></h2>
+
+<div class='widget-content popular-posts'>
+<a href="https://www.facebook.com/zaineb.mazouz.7"><img src="facebook.jpg"></a><br><br>
+<h2><font color=pink>قناتي على اليوتيوب
+</font></h2>
+<a href="https://www.youtube.com/channel/UCP9B56x4MDRULPlUTPWxJxw"><img src="youtube.jpg" 
+width=300 height=200></a><br><br>
+
+<div class='sidebar section' id='sidebar'><div class='widget PopularPosts' 
+id='PopularPosts1'>
+
+<h2><font color=pink>مواقع صديقة
+</font></h2>
+<ul>
+<li>
+<a href="http://ataliba-3afwa-allah.blogspot.com"><center><b><h3>مدونة الطالبة عفو الله</h3></b></center></a>
+</li>
+<li>
+<a href="http://ila-7abibayn.blogspot.com/"><center><b><h3> مدونة إلى حبيبين</h3></b></center></a>
+</li>
+</ul><br><br>
+
+</div>
+
+
+
+
+<div class='clear'></div>
+
+<div class='clear'></div>
+</div>
+
+
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+
+<div class='clear'></div>
+<div class='clear'></div>
+
+</div>
+</div>
+</div>
+
+
+<div id='lower'>
+<div id='lower-wrapper'></div>
+<div id='footer-bg'>
+<div id='footer'>
+
+جميع الحقوق محفوظة&#169; 2015 مدونة مزيوزة 
+
+
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>
