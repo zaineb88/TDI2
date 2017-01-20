@@ -1,0 +1,63 @@
+<html>
+
+<head><title>JEU</title>
+</head>
+
+<script language="javascript">
+pos_x = Math.round();
+pos_y = Math.round();
+
+
+
+function startChrono()
+{
+var ch=document.getElementById("Chrono").innerHTML;
+var chSec=parseInt(ch.substring(3,5));
+
+if(chSec<60)
+{
+chSec++;
+}
+
+
+
+-----
+
+function stop() 
+{
+if(chSec<60){
+document.write("Bravo tu a gagné")}
+else{
+document.write("Tu a perdu")}
+
+}
+
+</script>
+
+<body>
+
+
+<h2>Attrape moi si tu peux,tu a 60 sec pour le faire!</h2>
+
+
+
+
+
+    
+
+<form>
+<p id="Chrono" ></p> 
+<input type=button name="btnStart" value="Démarrer" onclick=startChrono(); >
+</form>
+
+<center><img  src="Capture1.png" margin-left="pos_y px";margin-top="x_pos px" ></center>
+
+
+<A HREF="Caputre1" onclick="stop();">
+</A>
+
+
+
+</body>
+
+</html>

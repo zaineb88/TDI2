@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<!-- Mirrored from www.ccim.be/ccim328/archi/zone.htm by HTTrack Website Copier/3.x [XR&CO'2004], Mon, 05 Dec 2005 18:32:12 GMT -->
+<HEAD>
+<TITLE>Architecture d'un site Web - En particulier - La zone de sécurité 
+</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<META HTTP-EQUIV="Content-language" CONTENT="fr">
+<META NAME="Author" CONTENT="Van Lancker Luc">
+<META NAME="Description" CONTENT="Architecture d'un site Web - Réflexions et stratégies pour la conception et l'organisation d'un site Web.">
+<META NAME="KeyWords" CONTENT="webdesign,webdesigner,web design,site,page,developer,dévelopement,dévelopement site,guide,webguide,site web,site internet,création site,conception site,webmaster,webmestre,webstyle,tutorial,didacticiel,html,télécharger,download">
+<META NAME="rating" CONTENT="General">
+<META NAME="Copyright" CONTENT="Copyright 1999 © Van Lancker Luc">
+<META NAME="Identifier-URL" CONTENT="../index.html">
+<META NAME="Reply-to" CONTENT="Vanlancker.Luc@ccim.be">
+<META NAME="Category" CONTENT="Internet">
+<META NAME="robots" CONTENT="index, follow">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#000080" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="BGPAGE.gif">
+
+<TABLE WIDTH="600" >
+<TR>
+<TD><FONT COLOR="#000080"><FONT SIZE=-1>&nbsp;&nbsp;En particulier</FONT></FONT>
+
+<TABLE WIDTH="100%" >
+<TR VALIGN=TOP>
+<TD WIDTH="80%"><B><FONT COLOR="#000080"><FONT SIZE=+3>La zone de s&eacute;curit&eacute;</FONT></FONT></B></TD>
+
+<TD ALIGN=RIGHT><A HREF="idx.htm"><IMG SRC="home.gif" ALT="Home" BORDER=0 HEIGHT=29 WIDTH=26></A><A HREF="resolution.htm"><IMG SRC="ARROWUP.gif" ALT="Uo" BORDER=0 HEIGHT=29 WIDTH=26></A><A HREF="misenpage.htm"><IMG SRC="ARROWDOW.gif" ALT="Down" BORDER=0 HEIGHT=29 WIDTH=26></A></TD>
+</TR>
+</TABLE>
+
+<CENTER><P><IMG SRC="ALIGNE.gif" HEIGHT=2 WIDTH=590></P></CENTER>
+</TD>
+</TR>
+</TABLE>
+
+<TABLE WIDTH="600" >
+<TR ALIGN=LEFT VALIGN=TOP>
+<TD WIDTH="1%"><IMG SRC="VIDE.gif" HEIGHT=12 WIDTH=12></TD>
+
+<TD>En fonction de ces diff&eacute;rentes r&eacute;solutions d’&eacute;cran
+possibles et des modifications qu’ils apporteront &agrave; votre site,
+est n&eacute; dans la pratique de la publication Web, le concept de la
+zone de s&eacute;curit&eacute;. 
+<P>Celle-ci est une zone qui, quelle que soit la r&eacute;solution d’&eacute;cran,
+le syst&egrave;me d’exploitation ou le navigateur utilis&eacute;, sera
+vue parfaitement par l’internaute. C’est aussi la partie de la page Web
+qui appara&icirc;tra en premier &agrave; l’œil de votre visiteur et dans
+laquelle on regroupera le maximum d’informations litt&eacute;raires ou
+graphiques (v&eacute;ritable synth&egrave;se de la page) qui l’inciteront
+&agrave; utiliser le d&eacute;filement vertical pour poursuivre l’exploration
+de la page. Pour une r&eacute;solution d’&eacute;cran toujours possible
+de 640x480, la largeur est d’environ 600 pixels car il faut tenir compte
+des marges et de la barre de d&eacute;filement. La hauteur, compte tenu
+des diff&eacute;rentes barres d’outils et barres d’&eacute;tat du navigateur,
+sera quant &agrave; elle d’environ 350 pixels.</P>
+
+<CENTER><P><FONT SIZE=-1>Zone de s&eacute;curit&eacute; du navigateur</FONT></P></CENTER>
+
+<CENTER><P><IMG SRC="SAFEBROW.gif" HEIGHT=148 WIDTH=252></P></CENTER>
+
+<P>On souhaite parfois que le visiteur puisse imprimer une page. Fort de
+votre exp&eacute;rience d’internaute, vous n’&ecirc;tes pas sans ignorer
+que l’impression d’une page Web n’est pas sans surprises, sp&eacute;cialement
+lorsque la page comporte des images.</P>
+
+<P>Notons tout d’abord que le langage Html n’a pas &eacute;t&eacute; con&ccedil;u
+pour l’impression. C’est le navigateur qui recompose la page Web de la
+largeur de l’&eacute;cran &agrave; la largeur (plus petite) d’une feuille
+A4. Si la page a &eacute;t&eacute; con&ccedil;ue avec du texte avec retour
+automatique du chariot ou avec des tableaux exprim&eacute;s en pourcentage
+de la fen&ecirc;tre, cette recomposition s’effectue sans probl&egrave;mes.
+Par contre, si la page comporte des images qui d&eacute;passent une largeur
+de 530 pixels ou si des tableaux avec une largeur exprim&eacute;e qui exc&egrave;de
+les 530 pixels, le risque est grand que certains &eacute;l&eacute;ments
+de l’image ou du tableau n’apparaissent pas &agrave; l’impression.</P>
+
+<P>Surtout si la page destin&eacute;e &agrave; &ecirc;tre imprim&eacute;e
+comporte des images, la zone s&ucirc;re d’impression devient 530 pixels
+de largeur pour 710 pixels de hauteur. Selon l’importance attach&eacute;e
+au document, il n’est pas inutile de tester cette impression avec diff&eacute;rents
+types d’imprimante. Il est dans certains cas plus s&ucirc;r de recourir
+&agrave; un document &agrave; t&eacute;l&eacute;charger du type PDF (Adobe
+Acrobat) qui est universel et vraiment con&ccedil;u pour l’impression.</P>
+
+<CENTER><P><FONT SIZE=-1>Zone de s&eacute;curit&eacute; pour l’impression
+</FONT></P></CENTER>
+
+<CENTER><P><IMG SRC="SAFEPRIN.gif" HEIGHT=302 WIDTH=222></P></CENTER>
+</TD>
+</TR>
+</TABLE>
+<P><BR></P>
+<TABLE WIDTH="600" >
+<TR ALIGN=LEFT VALIGN=TOP>
+<TD COLSPAN="2">
+<CENTER><P><IMG SRC="ALIGNE.gif" HEIGHT=2 WIDTH=590></P></CENTER>
+</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD ALIGN=LEFT WIDTH="80%"></TD>
+
+<TD ALIGN=RIGHT><A HREF="idx.htm"><IMG SRC="home.gif" ALT="Home" BORDER=0 HEIGHT=29 WIDTH=26></A><A HREF="resolution.htm"><IMG SRC="ARROWUP.gif" ALT="Up" BORDER=0 HEIGHT=29 WIDTH=26></A><A HREF="misenpage.htm"><IMG SRC="ARROWDOW.gif" ALT="Down" BORDER=0 HEIGHT=29 WIDTH=26></A></TD>
+</TR>
+</TABLE>
+
+</BODY>
+
+<!-- Mirrored from www.ccim.be/ccim328/archi/zone.htm by HTTrack Website Copier/3.x [XR&CO'2004], Mon, 05 Dec 2005 18:32:12 GMT -->
+</HTML>
