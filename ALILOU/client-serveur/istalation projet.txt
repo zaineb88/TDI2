@@ -1,0 +1,25 @@
+kadetachi database
+kadkhol l disque local c dyal pc toma programms toma microsoft sql server toma
+ mssql10.mssqlserver
+toma mssql toma data katekhtari database li bagha w kathezi 2 dyalha
+ mn ba3d katemchi l bin dyal projet 
+w kat7ethom tema
+khes t9alib 3la icon li bghitih f projet w t7oto 7ta howa m3ahom f bin
+katemchi l projet w kaderi mn fichier ajouter nouveau projet 
+autres types de projet
+programe d instalation 
+assistant  installation  tekhtar lah ism
+ok
+suivant suivant 
+katcochi kolchi 
+suivant 
+ajouter dikchi kamel li f bin
+suivant terminer
+dossier dapplication 
+kadir cree un racorci l sortie principale 2 copis w kate"tihom f parametre 
+dik icon li katjebo mn hadak fichier li kaykon f west
+mn ba3d kathoz wa7ed w kadiro f fichier liwel w kathoz tani w kadiro f fichier lakhar 
+kadiri gere lprojet
+katemchi l projet f bin katel9a stup kateklique 3liha
+w mn ba3d khesk terja3 l sql server w t2atachi l base donne
+

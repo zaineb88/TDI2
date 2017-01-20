@@ -1,0 +1,55 @@
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.exe.config
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.exe
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.pdb
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.GestionDesStagiaires.resources
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Menu.resources
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Properties.Resources.resources
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.exe
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.pdb
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Recherche.resources
+G:\ÖùmaIma\ISTA\TDI\2eme année\Alilou\Développement et déploiement d'applications client_Serveur\EX\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.GestionDesNotes.resources
+G:\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.exe.config
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.exe
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.pdb
+G:\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.exe
+G:\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.pdb
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.GestionDesNotes.resources
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.GestionDesStagiaires.resources
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Menu.resources
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Properties.Resources.resources
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Recherche.resources
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.exe.config
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.exe
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.pdb
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.exe
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.pdb
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.GestionDesNotes.resources
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.GestionDesStagiaires.resources
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Menu.resources
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Recherche.resources
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.exe.config
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.exe
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.pdb
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.exe
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\bin\Debug\TP_Client_Serveur.pdb
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.GestionDesNotes.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.GestionDesStagiaires.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Menu.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Recherche.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\TP_Client_Serveur.Form1.resources
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI 2eme\ALILOU\client-serveur\Projet-TP-Zaineb-Mazouz\TP_Client_Serveur\TP_Client_Serveur\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
