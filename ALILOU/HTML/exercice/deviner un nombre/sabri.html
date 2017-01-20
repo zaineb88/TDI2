@@ -1,0 +1,49 @@
+<html>
+<head>
+<script>
+x=Math.random();
+x=Math.round(x*100);
+i=0;
+ text =" ";
+function j() {
+     
+   m=document.getElementById('n').value;
+ 
+    if (x==m)
+ {
+        i++;
+        text +="<br>"+i+" valeur correcte votre score est"+i;
+} 
+  
+else { if(x>m){
+      i++;
+        text =text+"<br>"+i+" valeur plus grand";}
+else{ i++;
+        text =text+"<br>"+i+" valeur plus petite";}  
+}
+
+ document.getElementById("par").innerHTML = text;
+
+
+}
+</script>
+
+
+</head>
+<body>
+
+<p>Please entre le nombre entre 1 est 100:</p>
+
+<input id="n" type="text">
+
+<button type="button" onclick="j()">ok</button>
+
+<p id="par"></p>
+
+
+
+
+
+
+</body>
+</html>

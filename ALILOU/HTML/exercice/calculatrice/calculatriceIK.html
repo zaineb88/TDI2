@@ -1,0 +1,60 @@
+<html>
+<head>
+<script>
+
+function affectation(S)
+{
+document.getElementById("text1").value=document.getElementById("text1").value+S;
+}
+
+</script>
+<style type="text/CSS">
+<!--
+.text{text-align:left;width:260;height:60;font-style: italic;font-weight: bold;font-size: 30}
+.BTN{width:60;
+height:40;
+font-size:25;
+text-align:right}
+
+-->
+</style>
+</head>
+<body>
+<table cellspacing=4>
+<tr>
+<td></td>
+</tr>
+<td  colspan=4><input class="text"  id ="text1"type=text value="0"></td>
+<tr>
+<td><input class="BTN"type=button id ="btn1" value="1/X" onclick="affectation(0)" ></td>
+<td><input class="BTN" type=button id ="btn2" value="√" onclick="affectation(0)" ></td>
+<td><input  class="BTN"type=button id ="btn3" value="%" onclick="affectation('%')"></td>
+<td><input  class="BTN" type=button id ="btn4" value="±" onclick="affectation(0)"></td>
+</tr>
+<tr>
+<td><input class="BTN" type=button id ="btn5" value="1" onclick="affectation(1)"></td>
+<td><input class="BTN" type=button id ="btn6" value="2" onclick="affectation(2)"></td>
+<td><input class="BTN" type=button id ="btn7" value="3" onclick="affectation(3)"></td>
+<td><input class="BTN" type=button id ="btn8" value="+" onclick="affectation('+')"></td>
+</tr>
+<tr>
+<td><input class="BTN" type=button  id ="btn9" value="4" onclick="affectation(4)" ></td>
+<td><input class="BTN" type=button id ="btn10" value="5" onclick="affectation(5)"></td>
+<td><input class="BTN" type=button id ="btn11" value="6" onclick="affectation(6)"></td>
+<td><input class="BTN" type=button id ="btn12" value="-" onclick="affectation('-')"></td>
+</tr>
+<tr>
+<td><input class="BTN" type=button id ="btn13" value="7"onclick="affectation(7)"></td>
+<td><input class="BTN" type=button id ="btn14" value="8"onclick="affectation(8)"></td>
+<td><input class="BTN" type=button id ="btn15" value="9"onclick="affectation(9)"></td>
+<td><input class="BTN" type=button id ="btn16" value="*"onclick="affectation('*')"></td>
+</tr>
+<tr>
+<td><input class="BTN" type=button id ="btn17" value=","onclick="affectation(',')"></td>
+<td><input class="BTN"  type=button id ="btn18" value="0"onclick="affectation(0)"></td>
+<td><input class="BTN" type=button id ="btn19" value="="onclick="affectation(0)"></td>
+<td><input class="BTN" type=button id ="btn20" value="/"onclick="affectation('/')"></td>
+</tr>
+</table>
+</div>
+</body>

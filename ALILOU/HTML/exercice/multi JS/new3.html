@@ -1,0 +1,23 @@
+<html>
+<head>  
+<script language="JavaScript" >
+function multi()
+{
+var para=document.getElementById("input1").value
+for(i=1;i<=10;i++)
+{
+var param=para*i
+<!-- document.write( document.form.input.type["input1"].value); -->
+document.getElementById("result").innerHTML+=para+"*"+i+" = "+param+"<br>";
+}
+}
+</script>
+</head>
+<body>
+<form>
+<input type=number id="input1"/> 
+<input type=button name="btn1" value="Multiplication" onclick=multi(); >
+<p id="result"></p>
+</form>
+</body>
+</html>

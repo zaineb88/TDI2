@@ -1,0 +1,68 @@
+<html>
+<head>
+<link rel=stylesheet type="text/css" href="cal1.css">
+
+<script language="javascript">
+
+
+function affectation("s")
+{
+document.getElementById("text1").value=document.getElementById("text1").value+s;
+
+</script>
+
+
+
+
+<h1>Calculatrice</h1>
+
+
+</head>
+<body>
+
+<table border=2 cellspacing=10 cellpadding=2>
+<tr>
+<td colspan =5 ><input class="bt1" type=text id="text1" value="0"></td>
+</tr>
+<tr>
+<td><input type=button  value="<--"></td>
+<td><input type=button value="CE"></td>
+<td><input type=button value="C"></td>
+<td><input type=button value="±"></td>
+<td><input type=button value="√"></td>
+</tr>
+<tr>
+<td><input type=button value="7" id="7" onclick="affectation(7)"></td>
+<td><input type=button value="8" id="8"  onclick="affectation(8)"></td>
+<td><input type=button value="9" id="9"  onclick="affectation(9)"></td>
+<td><input type=button value="/" id="/"  onclick="affectation(/)"></td>
+<td><input type=button value="%" id="%"  onclick="affectation(%)"></td>
+</tr>
+<tr>
+<td><input type=button value="4" id="4"  onclick="affectation(4)"></td>
+<td><input type=button value="5" id="5"  onclick="affectation(5)"></td>
+<td><input type=button value="6" id="6" onclick="affectation(6)"></td>
+<td><input type=button value="*" id="*" onclick="affectation(*)"></td>
+<td><input type=button value="1/x" id="1/x" onclick="affectation(1/x)"></td>
+</tr>
+<tr>
+<td><input type=button value="1" id="1"  onclick="affectation(1)"></td>
+<td><input type=button value="2" id="2" onclick="affectation(2)"></td>
+<td><input type=button value="3" id="3" onclick="affectation(3)"></td>
+<td><input type=button value="-" id="-" onclick="affectation(-)"></td>
+<td rowspan=2><input class="bt2" type=button value="=" id="=" onclick="affectation(=)"></td>
+</tr>
+<tr>
+<td colspan=2><input class="bt3" type=button value="0"  id="0" onclick="affectation(0)"></td>
+<td><input type=button value="," id="," onclick="affectation(,)"></td>
+<td><input type=button value="+" id="+"  onclick="affectation(+)"></td>
+</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

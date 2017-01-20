@@ -1,0 +1,45 @@
+<html>
+ <head>
+   <title>Chrono</title>
+   <Script Language = "JavaScript">
+   function Start1()
+   {  
+   var s=document.getElementById('seconde').innerHTML;
+   var m=document.getElementById('min').innerHTML; 
+  
+   if(s<59)
+   {
+   s++; 
+     if(s>=10)
+	 {document.getElementById('seconde').innerHTML=s;}
+	 else
+	 {document.getElementById('seconde').innerHTML="0"+s;}
+   }
+   else
+   {
+   document.getElementById('seconde').innerHTML="00";
+   if(m<59)
+   {m++;
+     if(m>=10)
+	 {document.getElementById('min').innerHTML=m;}
+	 else
+	 {document.getElementById('min').innerHTML="0"+m;}
+   }
+   }  
+  comp=(setTimeout("Start1()",1000));
+}
+
+   </Script>
+ </head>
+ <body>
+ <form>
+  <table>
+  <tr><td><h1 id ="min" >00</h1></td><td><h1> : </h1></td><td><h1 id ="seconde">00</h1></td></tr>
+  </table>
+  
+   <input type ="button" name ="BTN1" value = "Start" onclick ="Start1()">
+   <input type ="button" name ="BTN2" value = "Stop" onclick ="clearTimeout(comp)">
+
+   </form>
+ </body>
+</html>

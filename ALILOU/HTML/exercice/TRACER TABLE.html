@@ -1,0 +1,42 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="Javascript"> 
+function tracer(lg,cl)             {
+
+ str ="<table border ='2'>";
+   for (i=1; i<=lg; i++){
+   str= str +"<tr>";
+               for (j=1; j<=cl; j++) {
+                  str= str +"<td>!!!!!</td>";
+                       }
+str= str +"</tr>";
+                       }
+                              
+str= str +"</table>";
+document.write(str);
+                                           }
+
+
+</SCRIPT>
+</head>
+<body>
+<form name="F1">
+Saisir le nombre de ligne:<BR>
+<BR>
+<p> NBR de ligne </p>
+<INPUT type="text" name="nbrl"><BR>
+<BR>
+<p> NBR de colonne </p>
+ <INPUT type="text"name="nbrc">
+
+<BR>
+<INPUT type="button" value="tracer"onClick="tracer(document.F1.nbrl.value,document.F1.nbrc.value)">
+</form>
+
+
+
+
+
+</body>
+
+</html>

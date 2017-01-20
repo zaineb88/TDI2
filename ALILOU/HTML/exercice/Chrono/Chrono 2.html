@@ -1,0 +1,52 @@
+<html>
+<head>  
+<script language="JavaScript" >
+function startChrono()
+{
+var ch=document.getElementById("Chrono").innerHTML;
+var chSec=parseInt(ch.substring(3,5));
+var chMin=parseInt(ch.substring(0,2));
+
+if(chSec<59)
+{
+chSec++;
+}
+else
+{
+chSec=0;
+}
+if(chSec==0)
+{
+chMin++;
+}
+if(chSec<=9 && chMin<=9 )
+{
+document.getElementById("Chrono").innerHTML= "0"+chMin+":0"+chSec;
+}
+else
+if(chMin<=9 && chSec>9)
+{
+document.getElementById("Chrono").innerHTML= "0"+chMin+":"+chSec;
+}
+else
+if(chMin>9 && chSec<=9 )
+{
+document.getElementById("Chrono").innerHTML= chMin+":0"+chSec;
+}
+else
+{
+document.getElementById("Chrono").innerHTML= chMin+":"+chSec;
+}
+<!-- start(); -->
+compteur=(setTimeout("startChrono()",1000));
+}
+</script>
+</head>
+<body>
+<form>
+<p id="Chrono" >00:00</p> 
+<input type=button name="btnStart" value="Start" onclick=startChrono(); >
+<input type=reset  value="Stop"onClick="clearTimeout(compteur)" >
+</form>
+</body>
+</html>
