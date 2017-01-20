@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Paragraphe</title>
+<style>
+.STYLE1{position :absolue ; top :60%; left:35%;
+padding:200px;
+text-align:center;
+background-color:#000000;
+border:solid 1px #ff00ff;
+color:#ffffff;
+}
+.R{color:#FF0000}
+.B{color:#0000FF}
+.G{color:#00FF00}
+.P{color:#CC99FF}
+.O{color:#FF9900}
+.Pi{color:#FF99CC}
+.Y{color:#FFFF00}
+.Plus{font-size:30px}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+$(document).ready(function(){
+   $("#ko").click(function(){
+     document.getElementById('par').innerHTML+=document.getElementById('TXT').value;
+});
+});
+$(document).ready(function(){
+    $("#Go").click(function(){
+   if($("#SEL").val()== 'Red')
+   {$("#par").addClass("R");}  
+   if($("#SEL").val()== 'Bleu')
+   {$("#par").addClass("B");}
+   if($("#SEL").val()== 'Green')
+   {$("#par").addClass("G");}
+   if($("#SEL").val()== 'Purple')
+   {$("#par").addClass("P");}
+   if($("#SEL").val()== 'Orange')
+   {$("#par").addClass("O");}
+   if($("#SEL").val()== 'Pink')
+   {$("#par").addClass("Pi");}
+   if($("#SEL").val()== 'Yellow')
+   {$("#par").addClass("Y");}
+ });
+});
+$(document).ready(function(){
+    $("#1").click(function(){
+	  $("#par").addClass("Plus");
+  });
+});
+</script>
+</head>
+<body>
+Choisir le couleur du paragraphe  : 
+<select id = 'SEL' size=1>
+<option> Red
+<option> Bleu
+<option> Green
+<option> Purple
+<option> Orange
+<option> Pink
+<option> Yellow
+</select>
+<input id = 'Go' type =button value = 'GO' >
+<br><br><br>
+Taille du text : 
+<input id = '1' type =button value = 'A+' >
+<input id = '-' type =button value = 'A-' >
+<br><br><br>
+Ajouter une phrase au paragraphe :
+<input id = 'TXT' type =text >
+<input id =ko type =button value= 'OK' >
+<br><br><br>
+<p class=STYLE1 id='par' ></p>
+</body>
+</html>

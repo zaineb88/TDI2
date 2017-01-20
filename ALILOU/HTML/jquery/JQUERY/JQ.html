@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Premiere exercice en Jquery </title>
+</head>
+<body>
+<H1>Titre 1</H1>
+<p> Texte 1 </p>
+<H1>Titre 2</H1>
+<p>Texte 2   </p>
+<H1>Titre 3</H1>
+<p> Texte 3 texte texte </p>
+<H1>Titre 4</H1>
+<p> Texte 4</p>
+<script src="jquery-1.11.1.js"></script>
+<script>
+$(function() {
+$('p:even').css({'color':'#0000ff','font-style':'italic'});
+$('p:odd').css('color','Green').css('font-weight','bold');
+$('H1:header').css('color','red');
+}
+);
+</script>
+</body>
+</html>

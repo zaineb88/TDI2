@@ -1,0 +1,105 @@
+<html>
+<head>
+<title> Animation </title>
+<style type = 'text/css'>
+.Pos1{position: absolute;left:10%}
+.Pos2{position: absolute;left:30%}
+.Pos3{position: absolute;left:50%}
+.Pos11{position: absolute;left:10%;display:none;}
+.Pos22{position: absolute;left:30%;display:none;}
+.Pos33{position: absolute;left:50%;display:none;}
+.PosMsg{position: absolute;left:35%; top:50%}
+.PosIMG{position: absolute;left:35%; top:60%}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#M1").click(function(){
+    $("#M11").slideDown("slow");
+  });
+});
+$(document).ready(function(){
+  $("#M2").click(function(){
+    $("#M22").slideDown("slow");
+  });
+});
+$(document).ready(function(){
+  $("#M3").click(function(){
+    $("#M33").slideDown("slow");
+  });
+});
+$(document).ready(function(){
+  $("#Me1").click(function(){
+    document.getElementById('Paragraphe').innerHTML ='Le Menu 1.1 a ete clique';
+  });
+});
+$(document).ready(function(){
+  $("#Me2").click(function(){
+    document.getElementById('Paragraphe').innerHTML ='Le Menu 1.2 a ete clique';
+  });
+});
+$(document).ready(function(){
+  $("#Me3").click(function(){
+    document.getElementById('Paragraphe').innerHTML ='Le Menu 2.1 a ete clique';
+	$('IMG').toggle();
+  });
+});
+$(document).ready(function(){
+  $("#Me4").click(function(){
+    document.getElementById('Paragraphe').innerHTML ='Le Menu 2.2 a ete clique';
+	$("IMG").animate({
+      left:'35%',
+      opacity:'1',
+      height:'225px',
+      width:'300px'
+    });
+  });
+});
+$(document).ready(function(){
+  $("#Me5").click(function(){
+    document.getElementById('Paragraphe').innerHTML ='Le Menu 3.1 a ete clique';
+	
+  });
+});
+$(document).ready(function(){
+  $("#Me6").click(function(){
+    document.getElementById('Paragraphe').innerHTML ='Le Menu 3.2 a ete clique';
+	$("IMG").animate({
+      left:'60%',
+      opacity:'0.5',
+      height:'150px',
+      width:'150px'
+    });
+  });
+});
+$(document).ready(function(){
+  $("#Me7").click(function(){
+    document.getElementById('Paragraphe').innerHTML ='Le Menu 3.3 a ete clique';
+	$('IMG').toggle();
+  });
+});
+</script>
+</head>
+<body>
+<div class = "Pos1" id= 'M1'>Menu 1 </div>
+<div class = "Pos2" id= 'M2'>Menu 2 </div>  
+<div class = "Pos3" id= 'M3'>Menu 3 </div>
+
+<!--                                     -->
+<ol class = "Pos11" id="M11">
+<Li id='Me1'> Menu 1.1</Li> 
+<Li id='Me2'> Menu 1.2</Li> 
+</ol>
+<ol class = "Pos22" id="M22">
+<Li id='Me3'> Menu 2.1</Li> 
+<Li id='Me4'> Menu 2.2</Li> 
+</ol>
+<ol class = "Pos33" id="M33">
+<Li id='Me5'> Menu 3.1</Li> 
+<Li id='Me6'> Menu 3.2</Li> 
+<Li id='Me7'> Menu 3.3</Li> 
+</ol>
+<p class=PosMsg id = 'Paragraphe'></p>
+<img class=PosIMG id='IMG' src = '52202_1218111262.jpg'>
+</body>
+</html>
