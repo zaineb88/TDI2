@@ -1,0 +1,588 @@
+﻿<!DOCTYPE html PUBLIC >
+
+<head>
+
+<meta content='ar' name='language'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+<script type='text/javascript'>var thumbnail_mode = "no-float" ;
+    summary_noimg = 300; 
+    summary_img = 290;
+    img_thumb_height = 250; 
+    img_thumb_width = 590;
+    </script>
+
+<script type='text/javascript'>
+//<![CDATA[
+function removeHtmlTag(strx,chop){ 
+	if(strx.indexOf("<")!=-1)
+	{
+		var s = strx.split("<"); 
+		for(var i=0;i<s.length;i++){ 
+			if(s[i].indexOf(">")!=-1){ 
+				s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length); 
+			} 
+		} 
+		strx =  s.join(""); 
+	}
+	chop = (chop < strx.length-1) ? chop : strx.length-2; 
+	while(strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++; 
+	strx = strx.substring(0,chop-1); 
+	return strx+'...'; 
+}
+
+function createremoveHtmlTag(pID){
+	var div = document.getElementById(pID);
+	var imgtag = "";
+	var img = div.getElementsByTagName("img");
+	var lis = liste_noimg;
+	if(img.length>=1) {	
+		imgtag = '<span style="float:right; padding:0px 0px 5px 5px;">
+        <img src="'+img[0].src+'" width="'+img_thumb_width+'px" 
+          height="'+img_thumb_height+'px"/></span>';
+		lis = liste_img;
+	}
+	
+	var liste = imgtag + '<div>' + removeHtmlTag(div.innerHTML,summ) + '</div>';
+	div.innerHTML = liste;
+}
+//]]>
+</script>
+
+
+
+<script type='text/javascript'>
+//<![CDATA[
+var scrollSpeed = 80;
+var current = 0;
+var direction = 'h';
+function bgscroll(){
+	current -= 2;
+	$('#bg_scroll').css("backgroundPosition", (direction == 'h') ? current+"px 0" :
+   "0 " + current+"px");
+}
+setInterval("bgscroll()", scrollSpeed);	
+$(function () {
+	$(".news").innerfade({
+		animationtype: 'slide',
+		speed: 1000,
+		timeout: 3000,
+		type: 'random',
+		containerheight: '30px'
+	});
+	var startSlide = 1;
+	$('#slides').slides({
+		preload: true,
+		preloadImage: '../images/loading.gif',
+		generatePagination: false,
+		play: 3000,
+		pause: 2500,
+		hoverPause: true,
+		container: 'slides_container',
+		start: startSlide
+	});
+	$(".menu a").removeAttr('title');
+	$(".menu ul").css({display:"none"});
+	$(".menu li").each(function(){	
+		var jQuerysubmeun = jQuery(this).find('ul:first');
+		$(this).hover(function(){	
+		jQuerysubmeun.stop().css({overflow:"hidden", height:"auto", display:"none", paddingTop:0}).slideDown(420, function(){
+		$(this).css({overflow:"visible", height:"auto"});
+	});	
+	},function(){	
+		jQuerysubmeun.stop().slideUp(250, function(){	
+		$(this).css({overflow:"hidden", display:"none"});
+	});
+	});	
+	});
+	
+	
+	$('#slides_mid').slides({
+		preload: true,
+		preloadImage: '../images/loading.gif',
+		play: 5000,
+		pause: 2500,
+		hoverPause: true,
+		generatePagination: true,
+		container: 'slides_mid_container',
+		animationStart: function(current){
+			$('.caption').css({bottom:-35});
+			if (window.console && console.log) {
+				console.log('animationStart on slide: ', current);
+			};
+		},
+		animationComplete: function(current){
+			$('.caption').css({bottom:1});
+			if (window.console && console.log) {
+				console.log('animationComplete on slide: ', current);
+			};
+		},
+		slidesLoaded: function() {
+			$('.caption').css({bottom:0});
+		}
+	});
+	$("#accordion li:first-child ul").css({"display":"block"});
+	
+	$("#accordion li:first-child a").addClass("current");
+	$("#accordion li ul li a").removeClass("current");
+	
+	$("#accordion li a").addClass("heading");
+	$("#accordion li ul li a").removeClass("heading");
+	//$('#accordion').accordion();
+	
+});
+
+$(window).load(function() {
+
+	//$(function(){$('img').mouseover(function(){$(this).fadeTo('400',0.50);$(this).
+fadeTo('400',1)})});
+$(function(){$('img.luay2011').mouseover(function(){$(this).animate({rotate:'40deg'});
+$(this).animate({rotate:'-=40deg'})})});$(function(){$('img.luay2012').
+mouseover(function(){$(this).animate({rotate:'40deg'});
+$(this).animate({rotate:'-=40deg'})})});
+	
+	setTimeout(
+	  function() {
+			var height_main_content = $("#main_content").delay(5000).outerHeight();
+			var height_right_sidebar = $("#right_sidebar").delay(5000).outerHeight();
+			var height_left_sidebar = $("#left_sidebar").delay(5000).outerHeight();
+			//alert(height_main_content);
+			
+			if (height_right_sidebar > height_main_content && height_right_sidebar > height_left_sidebar) {
+				$("#right_sidebar").css({"height":height_right_sidebar+20});
+				$("#left_sidebar").css({"height":height_right_sidebar+20});
+				$("#main_content").css({"height":height_right_sidebar});
+			}else if (height_left_sidebar > height_main_content && height_left_sidebar > height_right_sidebar) {
+				$("#right_sidebar").css({"height":height_left_sidebar+20});
+				$("#left_sidebar").css({"height":height_left_sidebar+20});
+				$("#main_content").css({"height":height_left_sidebar});
+			}else {
+				$("#left_sidebar").css({"height":height_main_content});
+				$("#right_sidebar").css({"height":height_main_content});
+			}
+	  },5000);
+	var offsetX = 50
+	var offsetY = -100
+
+	$('.pop-up-link').click(function(e) {
+		$(this).next().css({
+
+			"top" : e.pageY + offsetY + offsetY
+		}).css({
+			"left" : e.pageX + offsetX
+		}).fadeIn(500);
+		return false;
+	});
+
+	$(".close").click(function() {
+		$('.pop-up-link').next().fadeOut(500);
+		return false;
+	});
+	
+	var height_main_content = $("#main_content").delay(5000).outerHeight();
+	var height_right_sidebar = $("#right_sidebar").delay(5000).outerHeight();
+	var height_left_sidebar = $("#left_sidebar").delay(5000).outerHeight();
+	
+	
+	if (height_right_sidebar > height_main_content && height_right_sidebar >
+            height_left_sidebar) {
+		$("#right_sidebar").css({"height":height_right_sidebar+20});
+		$("#left_sidebar").css({"height":height_right_sidebar+20});
+		$("#main_content").css({"height":height_right_sidebar});
+	}else if (height_left_sidebar > height_main_content && height_left_sidebar > height_right_sidebar) {
+		$("#right_sidebar").css({"height":height_left_sidebar+20});
+		$("#left_sidebar").css({"height":height_left_sidebar+20});
+		$("#main_content").css({"height":height_left_sidebar});
+	}else {
+		$("#left_sidebar").css({"height":height_main_content});
+		$("#right_sidebar").css({"height":height_main_content});
+	}
+
+	$("ul#accordion .heading").click(function () {
+		$(this).toggleClass("current");
+		$(this).next("ul").slideToggle(500);
+		return false;
+	});
+	
+	
+	$("ul#accordion li ul a").hover(function () {
+		$(this).stop().animate({"margin-right":"10px"});
+	},function () {
+		$(this).stop().animate({"margin-right":"0"});
+	});
+
+	$(".post_left_cat li").hover(function () {
+		var post_id = $(this).attr("class");
+		var cat_id = $(this).attr("id");
+		$(".cat_post_"+cat_id+"_"+post_id).show();
+		$(".hide_post_"+cat_id).hide();
+	},function () {
+		var cat_id = $(this).attr("id");
+		$(".hide_post_"+cat_id).show();
+		$(".cat_post_"+cat_id).hide();
+	});
+	
+});
+//]]>
+</script>
+
+
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script>
+
+</head>
+
+<body>
+<div id='wrapper'>
+</div>
+<div id='outer-wrapper'>
+<!--header -->
+<div id='header' background="monica.jpg">
+<div id='logo'></div>
+<div id='slides'>
+<div class='slides_container'>
+<div class='slide'>
+<div class='img_slide'>
+<img class='attachment-post-thumbnail wp-post-image' height='180' 
+src='monica.jpg' width='950'/></div>
+<div class='content_slide'>
+
+</div>
+</div>
+
+
+<div class='colonne'>
+</div>
+
+<div class='colonne'>
+<div class='img_colonne'>
+</div>
+</div>
+</div>
+
+</div><!-- fin colonne -->
+</div>
+
+<!--/header -->
+
+
+
+<ul id='-menu'>
+<li><a href='modawana.html'>الـرئـيـسـيـة</a></li>
+<li><a href='islamiyat.html'>اسـلامـيـات</a>
+
+<ul><a href=''> مواضيع اسلامية متنوعة </a></li></ul>
+<li><a href='mawadi3ama.html'>مواضيع عامة</a>
+<ul>
+<li><a href=' '> مـواضيع عامة و مختلفة</a></li>
+</ul>
+</li>
+<li><a href="khawater.html">خـواطـر</a>
+<ul>
+<li><a href=''> إبداعاتي المتواضعة</a></li>
+</ul>
+</li>
+<li><a href='akhbar.html'>أخـبـار مـتـنـوعـة</a>
+<ul>
+<li>
+<a href=''>أهم الأخبار و المستجدات</a></li>
+</ul>
+</li>
+<li><a href='mokhtarat.html'>مـخـتـارات</a>
+<ul>
+<li>
+<a href=''>عبارات راقت لي</a></li>
+</ul>
+</li>
+
+<li><a href='archif.html'>أرشـيـف </a>
+
+<ul><a href=''> أرشيف المدونة</a></li></ul>
+
+<li><a href='raselni.html'>   راسـلـنـي </a>
+<ul>
+<li>
+<a href=''>أهلا بالملاحظاتكم </a></li>
+</ul>
+</li>
+</ul>
+
+<script language="JavaScript">
+var sizes = new Array("0px", "1px", "2px", "3px", "4px");
+sizes.pos = 0;
+function elast() {
+var el = document.all.elastic;
+if (null == el.direction)
+   el.direction = 1;
+else if ((sizes.pos > sizes.length - 4) || (0 == sizes.pos))
+   el.direction *= -1;
+   el.style.letterSpacing = sizes[sizes.pos += el.direction];
+}
+setInterval('elast()', 100)
+</script>
+
+
+<div id='content-wrapper'>
+
+<div id='main-wrapper'>
+<div class='main section' id='main'>
+
+ <div class="date-outer">
+         
+        
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post'>
+<div class='medium_header'></div>
+<div class='medium_content'></div>
+<div class='post-title'>
+
+<h1><font color=#F96>
+ أردوغان استأثر بالسلطة وأسس دولة الرجل الواحد</font>
+
+</h1></div>
+
+</div>
+
+<div class='post_date'>
+<div class='post-labels'>
+<div class='tag'>
+
+
+<script language="JavaScript">
+var sizes = new Array("0px", "1px", "2px", "3px", "4px");
+sizes.pos = 0;
+function elast() {
+var el = document.all.elastic;
+if (null == el.direction)
+   el.direction = 1;
+else if ((sizes.pos > sizes.length - 4) || (0 == sizes.pos))
+   el.direction *= -1;
+   el.style.letterSpacing = sizes[sizes.pos += el.direction];
+}
+setInterval('elast()', 100)
+</script>
+
+
+<P>
+<div id='summary8674556496634577957'>
+<div dir="rtl" style="text-align: right;" trbidi="on">
+<div class="separator" style="clear: both; text-align: center;">
+</div><div class="separator" style="clear: both; text-align: center;">
+<img src="akhbar1.jpg" height="378" width="640" />
+</div><br /><div class="separator" style="clear: both; text-align: 
+center;"></div><div class="separator" style="clear: both; text-align: center;"><b>
+</div><br /> قال الداعية الإسلامي التركي، محمد فتح الله كولن، إن حزب العدالة والتنمية التركي "وعد بدفع المسيرة الديمقراطية إلى الأمام، وبناء دولة القانون حين أتى أول مرة إلى الحكم إلى الحكم، إلا أنه بعد الانتخابات البرلمانية سنة 2011 غير مجرى سيره نحو إقامة "دولة الرجل الواحد" وبالتالي ابتعد عن ذاته".
+
+وأضاف الداعية التركي الذي يعيش في الولايات المتحدة الأمريكية والذي أصدرت محكمة تركية يوم أمس قرارا بإلقاء القبض عليه، في حوار خاص مع جريدة Süddeutsche Zeitung ""SZ"" الألمانية بأن الناخبين من حركة الخدمة، والتي اسسها هذا الداعية، قد "دعموا الحزب الحاكم في البداية إلا أنهم بعد ظهور هذا التغيير الملاحظ في مسيرة الحزب اتخذوا تجاهه موقفا مناقضا له بعدما "تبينت محاولة حزب العدالة والتنمية ربط كل شيء بالسلطة التنفيذية، عقب التخلص مباشرة من الوصاية العسكرية، وتعطيله عمل المؤسسات المراقبة القانونية، ونزعه استقلال سلطة القضاء، أسس وصاية الحزب".
+
+وأردف كولن في حديثه الذي أجري قبل إصدار قرار اعتقاله "اتخذنا موقفا معارضا في السابق ضد الوصاية العسكرية ونقف اليوم كذلك ضد وصاية الحزب الواحد، وبسسب ذلك تم وصفنا بالخونة".
+
+وذهبت الصحيفة الألمانية في تقديمها للحوار إلى أنه بالرغم من مرور سنة كاملة، لمزاعم الفساد والرشوة "لا زال أردوغان حاكما لتركيا"، واعتبرت الجريدة أن أردوغان "بات في مأمن أكثر مما سبق. فأردوغان الذي تولى رئاسة الجمهورية منذ مئة يوم تقريبا، يقيم في قصر عظيم، ويشدد في القوانين أكثر، ويعرض كل من انتقده من الصحفيين للتحقيق".
+
+ولفت الداعية كولن في معرض جوابه عن سؤال الصحيفة الألمانية عن دعم حركة الخدمة للحزب قبل أن تتغير الأمور، بالقول: "وعد حزب العدالة والتنمية في مرحلة تأسيسها بالديمقراطية وحقوق الإنسان، وعضوية الإتحاد الأوروبي، والقضاء على الفساد، والكف عن إقصاء المختلفين في الاتجاهات والأفكار، والتنمية الاقتصادية وغيرها... فأنجز الحزب في السنوات الأولى أعمالا وفق ما وعدوا، وبالتالي حصلوا على تأييد ودعم أفراد حركة الخدمة".
+
+وزاد المتحدث: "بعد انتخابات الولاية الثالثة التي أجريت سنة 2011 أخذوا في ممارسة أعمال ضد المكتسبات الديمقراطية. على سبيل المثال، ممارسة الضغط على الإعلام، ومنح صلاحيات متميزة لاستخبارات الأمن الوطني، وتطبيق طرق وأساليب سياسية تلك التي مارستها دائرة الأمن والاستخبارات الألمانية الشرقية سابقا ضد المخالفين، والاستهانة بأحكام القضاء وقراراتها، وممارساتهم المرفوضة ضد المحتجين الذي عبروا عن مطالبهم في إطار ديمقراطي، وغيرها من الأمثلة".
+
+وعن موقفه من مزاعم الفساد، والتي فجرت الحرب الشعواء بين حزب أردوغان وجماعة الخدمة، أشار كولن إلى أن "المرحلة القضائية والقانونية لم تفعّل كما هو المطلوب، ولم يستطع أحد الإطلاع على حقيقة الأمر. وإذا كانت في الغرب مثل تلك المزاعم لتساقطت الحكومات أمام تلك الاتهامات. فـ"أنقرة" وصفت تحقيقات الفساد تلك، مؤامرة دولية حيكت ضدها، كما هو عادة الأنظمة السلطوية".
+
+وسألت الصحيفة عن إمكانية التصالح مع أردوغان، فأجاب كولن بأن جماعة الخدمة لم تعلن الحرب، "لذا، ينبغي عليهم أن يخطوا الخطوة الأولى للمصالحة. غير أن أردوغان إذا ما اعترف يوما ما أن ما قاله في لقائاته الجاهيرية وسائر اجتماعاته إنما كان عبارة عن أكاذيب وافتراءات، فآنئذ أرضى بالمصالحة".
+
+وعن أمله في المستقبل بتركيا، اشار كولن إلى أنه لم يسبق له قط أن كان سعيدا على المدى البعيد، حيث طُلب وتوبع في تركيا بعد كل انقلاب عسكري. رغم كل ذلك فإن ما يعيشه حاليا لهو الأدعى للاستياء. "الجميل فيما يحدث حاليا، هو تميز الألماس عن الفحم شيئا فشيئا. فالعالم حاليا يستطيع أن يفهم تلك الحركة" يقول كولن.
+
+إلى ذلك عرفت السنة الماضية مواجهة بين الحكومة التركية التي يقودها حزب العدالة والتنمية وجماعة الخدمة التي يقودها الداعية التركي المعروف محمد فتح الله كولن، على خلفية تفجير مزاعم حول ملفات فساد ومحاولة الانقلاب على أردوغان فيما عرف باحتجاجات ساحة تقسيم.
+
+وقد عانت الحكومة التركية من تبعات الخلافات السياسية حيث حسم أردوغان انتصار حزبه خلال الانتخابات البلدية وانتخابات الرئاسة التي بوأته رئاسة جمهورية تركيا في أول انتخابات مباشرة عرفتها تركيا، وذلك خلال الدورة الأولى.
+
+وأبدى أردوغان عزمه على تجفيف جماعة الخدمة من تركيا خلال خطاب النصر من على شرفة النصر بمقر حزبه بأنقرة، وقال في خطابه بأنه أصبح رئيسا لكل تركيا باستثناء جماعة الخدمة التي تعهد بمواصلة الحرب ضدها.
+</b></div> <br><hr border:3>
+
+
+
+<div class='post-title'>
+
+<h1><font color=#F96>
+مُقرّرُ أكاديمية المملكة يعتبرُ الدفاع عن العربية "واجباً شرعيّا</font>
+
+</h1></div>
+
+
+<P>
+<div id='summary8674556496634577957'>
+<div dir="rtl" style="text-align: right;" trbidi="on">
+<div class="separator" style="clear: both; text-align: center;">
+</div><div class="separator" style="clear: both; text-align: center;">
+<img src="akhbar2.jpg" height="378" width="640" />
+</div><br /><div class="separator" style="clear: both; text-align: 
+center;"></div><div class="separator" style="clear: both; text-align: center;"><b>
+في خضمّ النّدوات واللقاءات المُنعقدة بمناسبة اليوم العالمي للغة العربية، والذي يُصادف الـ18 من دجنبر، وفي غمْرة الأسئلة المطروحة حوْل سُبُل النهوض بوضعية لغة الضاد، ذهبَ مُقرّر أكاديمية المملكة المغربيّة مصطفى الزباخ، إلى اعتبار أنّ حمايةَ اللغة العربية والعمل على تطويرها "واجبٌ شرعيّ".
+
+الزباخ، الذي حاضَر في ندوة بالرباط حول موضوع "اللغة العربية بين الواقع والآمال"، بصفته رئيسَ منظمة المجتمع المدني الدولية لقيَم المواطن والتنمية والحوار"، قال إنّ البيئة اللغوية والهويّة الحضارية العربية تحيطُ بها تحدّيات متزايدة، ومخاطرُ متنامية"، دونَ أن يُفصّل في طبيعة هذه المخاطر.
+
+ورَبطَ مقرّر أكاديمية المملكة بين اللغة العربية والدّين الإسلامي، قائلا إنّها "أداة للتواصل وتبادل المعارف وركيزةٌ أساسية لفهم الإسلام وثقافته وصيانة حياة المُسلم، وملجأَ الحضارة الإسلامية"، وأضاف "الحملات والعداوات المُشكّكة في الريادة الحضارية للغة العربية تُعتبر جريمة في حقّ المجتمعات الإسلامية والإنسانية على السواء".
+
+واسترْسَل مصطفى الزباخ في انتقاد "أعداء" اللغة العربية بالقول "الترويج لعقم اللغة العربية يُعتبر عدوانا على ممتلكاتنا، وجحودا لاختلافها وتنوّعها"، مشيرا إلى أنّ التنوّع أقرّته المواثيق الدوليّة واعتبرتْه جُزْءً من حقوق الإنسان، كما أقرّه الإسلام"، وزادَ أنّ اللغة العربية ليستْ لغة العرب وحْدهم، بل لغة الإسلام.
+
+وَحرص مقرر أكاديمية المملكة أكثر من مرّة على ربْط اللغة العربية بالإسلام، وقال "تزداد الحاجة اليوم، أكثر من أيّ وقت مضى، إلى أن ينصبّ الانشغال الرئيسي على القضايا العَقدية في ظلّ الاستيلاب والحرْب القيمية على لغة القرآن وثقافة الإسلام"، منتقدا استمرارَ عدم اعتماد اللغة العربية في المعاملات الرسمية، والخطابات والمراسلات الإدارية للدولة.
+</b></div><br><hr border:3>
+
+
+<script type='text/javascript'>createSummaryAndThumb("summary8674556496634577957");
+</script>
+</P>
+
+<div class='clear'></div>
+</div>
+</div>
+<div class='medium_content_footer_top'></div>
+<div class='post-footer'>
+
+
+
+</div>
+
+
+
+<div class='post-footer'>
+</div>
+
+
+
+
+
+
+
+<span class='post-location'>
+</span>
+</div>
+<div class='post-footer'>
+</div>
+<div class='medium_content_footer_bottom'></div>
+</div>
+</div>
+
+</div></div>
+</div>
+
+
+
+
+<script type="text/javascript">window.___gcfg = {'lang': 'ar'};</script>
+</div></div>
+</div>
+<div id='sidebar-wrapper'>
+<div class='widget' id='searchf'>
+<div class='widget-content'>
+
+
+</div>
+
+
+</br>
+
+
+<h2><font color=pink>أهلا و سهلا بكم
+</font></h2>
+
+
+<div class="textwidget"><marquee direction="up" width="300" onmouseover="this.stop()" 
+scrollamount="4" onmouseout="this.start()" height="200" align="left"><br /> 
+
+<img border="0" 
+ width="300" src="a.jpg" 
+height="250" />
+<br/>
+
+
+<img   width="300" src="b.jpg" height="200" />
+<br/>
+ 
+<img border="0" 
+ width="300" src="c.jpg" height="200" >
+<br/>
+
+<img border="0" width="300" src="d.jpg" 
+height="200" /></a>
+<br/>
+
+
+<img border="0"  width="300" src="e.jpg" 
+height="200" /></a>
+<br/>
+
+
+
+<p/></p></marquee></div>
+
+
+                </div><br>
+
+<h2><font color=pink>صفحتي على الفيسبوك
+</font></h2>
+
+<div class='widget-content popular-posts'>
+<a href="https://www.facebook.com/zaineb.mazouz.7"><img src="facebook.jpg"></a><br><br>
+<h2><font color=pink>قناتي على اليوتيوب
+</font></h2>
+<a href="https://www.youtube.com/channel/UCP9B56x4MDRULPlUTPWxJxw"><img src="youtube.jpg" 
+width=300 height=200></a><br><br>
+
+<div class='sidebar section' id='sidebar'><div class='widget PopularPosts' 
+id='PopularPosts1'>
+
+<h2><font color=pink>مواقع صديقة
+</font></h2>
+<ul>
+<li>
+<a href="http://ataliba-3afwa-allah.blogspot.com"><center><b><h3>مدونة الطالبة عفو الله</h3></b></center></a>
+</li>
+<li>
+<a href="http://ila-7abibayn.blogspot.com/"><center><b><h3> مدونة إلى حبيبين</h3></b></center></a>
+</li>
+</ul><br><br>
+
+</div>
+
+
+
+
+<div class='clear'></div>
+
+<div class='clear'></div>
+</div>
+
+
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+
+<div class='clear'></div>
+<div class='clear'></div>
+
+</div>
+</div>
+</div>
+
+
+<div id='lower'>
+<div id='lower-wrapper'></div>
+<div id='footer-bg'>
+<div id='footer'>
+
+جميع الحقوق محفوظة&#169; 2015 مدونة مزيوزة 
+
+
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>

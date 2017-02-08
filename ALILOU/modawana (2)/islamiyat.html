@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html PUBLIC >
+
+<head>
+
+<meta content='ar' name='language'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+<script type='text/javascript'>var thumbnail_mode = "no-float" ;
+    summary_noimg = 300; /* height du texte  */
+    summary_img = 290; /* height du texte avec photo*/
+    img_thumb_height = 250; /* widht de la photo*/
+    img_thumb_width = 590; /*height de la photo */
+    </script>
+
+<script type='text/javascript'>
+//<![CDATA[
+function removeHtmlTag(strx,chop){ 
+	if(strx.indexOf("<")!=-1)
+	{
+		var s = strx.split("<"); 
+		for(var i=0;i<s.length;i++){ 
+			if(s[i].indexOf(">")!=-1){ 
+				s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length); 
+			} 
+		} 
+		strx =  s.join(""); 
+	}
+	chop = (chop < strx.length-1) ? chop : strx.length-2; 
+	while(strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++; 
+	strx = strx.substring(0,chop-1); 
+	return strx+'...'; 
+}
+
+function createremoveHtmlTag(pID){
+	var div = document.getElementById(pID);
+	var imgtag = "";
+	var img = div.getElementsByTagName("img");
+	var lis = liste_noimg;
+	if(img.length>=1) {	
+		imgtag = '<span style="float:right; padding:0px 0px 5px 5px;">
+        <img src="'+img[0].src+'" width="'+img_thumb_width+'px" 
+          height="'+img_thumb_height+'px"/></span>';
+		lis = liste_img;
+	}
+	
+	var liste = imgtag + '<div>' + removeHtmlTag(div.innerHTML,summ) + '</div>';
+	div.innerHTML = liste;
+}
+//]]>
+</script>
+
+
+
+<script type='text/javascript'>
+//<![CDATA[
+var scrollSpeed = 80;
+var current = 0;
+var direction = 'h';
+function bgscroll(){
+	current -= 2;
+	$('#bg_scroll').css("backgroundPosition", (direction == 'h') ? current+"px 0" :
+   "0 " + current+"px");
+}
+setInterval("bgscroll()", scrollSpeed);	
+$(function () {
+	$(".news").innerfade({
+		animationtype: 'slide',
+		speed: 1000,
+		timeout: 3000,
+		type: 'random',
+		containerheight: '30px'
+	});
+	var startSlide = 1;
+	$('#slides').slides({
+		preload: true,
+		preloadImage: '../images/loading.gif',
+		generatePagination: false,
+		play: 3000,
+		pause: 2500,
+		hoverPause: true,
+		container: 'slides_container',
+		start: startSlide
+	});
+	$(".menu a").removeAttr('title');
+	$(".menu ul").css({display:"none"});
+	$(".menu li").each(function(){	
+		var jQuerysubmeun = jQuery(this).find('ul:first');
+		$(this).hover(function(){	
+		jQuerysubmeun.stop().css({overflow:"hidden", height:"auto", display:"none", paddingTop:0}).slideDown(420, function(){
+		$(this).css({overflow:"visible", height:"auto"});
+	});	
+	},function(){	
+		jQuerysubmeun.stop().slideUp(250, function(){	
+		$(this).css({overflow:"hidden", display:"none"});
+	});
+	});	
+	});
+	
+	
+	$('#slides_mid').slides({
+		preload: true,
+		preloadImage: '../images/loading.gif',
+		play: 5000,
+		pause: 2500,
+		hoverPause: true,
+		generatePagination: true,
+		container: 'slides_mid_container',
+		animationStart: function(current){
+			$('.caption').css({bottom:-35});
+			if (window.console && console.log) {
+				console.log('animationStart on slide: ', current);
+			};
+		},
+		animationComplete: function(current){
+			$('.caption').css({bottom:1});
+			if (window.console && console.log) {
+				console.log('animationComplete on slide: ', current);
+			};
+		},
+		slidesLoaded: function() {
+			$('.caption').css({bottom:0});
+		}
+	});
+	$("#accordion li:first-child ul").css({"display":"block"});
+	
+	$("#accordion li:first-child a").addClass("current");
+	$("#accordion li ul li a").removeClass("current");
+	
+	$("#accordion li a").addClass("heading");
+	$("#accordion li ul li a").removeClass("heading");
+	//$('#accordion').accordion();
+	
+});
+
+$(window).load(function() {
+
+	//$(function(){$('img').mouseover(function(){$(this).fadeTo('400',0.50);$(this).
+fadeTo('400',1)})});
+$(function(){$('img.luay2011').mouseover(function(){$(this).animate({rotate:'40deg'});
+$(this).animate({rotate:'-=40deg'})})});$(function(){$('img.luay2012').
+mouseover(function(){$(this).animate({rotate:'40deg'});
+$(this).animate({rotate:'-=40deg'})})});
+	
+	setTimeout(
+	  function() {
+			var height_main_content = $("#main_content").delay(5000).outerHeight();
+			var height_right_sidebar = $("#right_sidebar").delay(5000).outerHeight();
+			var height_left_sidebar = $("#left_sidebar").delay(5000).outerHeight();
+			//alert(height_main_content);
+			
+			if (height_right_sidebar > height_main_content && height_right_sidebar > height_left_sidebar) {
+				$("#right_sidebar").css({"height":height_right_sidebar+20});
+				$("#left_sidebar").css({"height":height_right_sidebar+20});
+				$("#main_content").css({"height":height_right_sidebar});
+			}else if (height_left_sidebar > height_main_content && height_left_sidebar > height_right_sidebar) {
+				$("#right_sidebar").css({"height":height_left_sidebar+20});
+				$("#left_sidebar").css({"height":height_left_sidebar+20});
+				$("#main_content").css({"height":height_left_sidebar});
+			}else {
+				$("#left_sidebar").css({"height":height_main_content});
+				$("#right_sidebar").css({"height":height_main_content});
+			}
+	  },5000);
+	var offsetX = 50
+	var offsetY = -100
+
+	$('.pop-up-link').click(function(e) {
+		$(this).next().css({
+
+			"top" : e.pageY + offsetY + offsetY
+		}).css({
+			"left" : e.pageX + offsetX
+		}).fadeIn(500);
+		return false;
+	});
+
+	$(".close").click(function() {
+		$('.pop-up-link').next().fadeOut(500);
+		return false;
+	});
+	
+	var height_main_content = $("#main_content").delay(5000).outerHeight();
+	var height_right_sidebar = $("#right_sidebar").delay(5000).outerHeight();
+	var height_left_sidebar = $("#left_sidebar").delay(5000).outerHeight();
+	
+	
+	if (height_right_sidebar > height_main_content && height_right_sidebar >
+            height_left_sidebar) {
+		$("#right_sidebar").css({"height":height_right_sidebar+20});
+		$("#left_sidebar").css({"height":height_right_sidebar+20});
+		$("#main_content").css({"height":height_right_sidebar});
+	}else if (height_left_sidebar > height_main_content && height_left_sidebar > height_right_sidebar) {
+		$("#right_sidebar").css({"height":height_left_sidebar+20});
+		$("#left_sidebar").css({"height":height_left_sidebar+20});
+		$("#main_content").css({"height":height_left_sidebar});
+	}else {
+		$("#left_sidebar").css({"height":height_main_content});
+		$("#right_sidebar").css({"height":height_main_content});
+	}
+
+	$("ul#accordion .heading").click(function () {
+		$(this).toggleClass("current");
+		$(this).next("ul").slideToggle(500);
+		return false;
+	});
+	
+	
+	$("ul#accordion li ul a").hover(function () {
+		$(this).stop().animate({"margin-right":"10px"});
+	},function () {
+		$(this).stop().animate({"margin-right":"0"});
+	});
+
+	$(".post_left_cat li").hover(function () {
+		var post_id = $(this).attr("class");
+		var cat_id = $(this).attr("id");
+		$(".cat_post_"+cat_id+"_"+post_id).show();
+		$(".hide_post_"+cat_id).hide();
+	},function () {
+		var cat_id = $(this).attr("id");
+		$(".hide_post_"+cat_id).show();
+		$(".cat_post_"+cat_id).hide();
+	});
+	
+});
+//]]>
+</script>
+
+
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script>
+
+</head>
+
+<body>
+<div id='wrapper'>
+</div>
+<div id='outer-wrapper'>
+<!--header -->
+<div id='header' background="monica.jpg">
+<div id='logo'></div>
+<div id='slides'>
+<div class='slides_container'>
+<div class='slide'>
+<div class='img_slide'>
+<img class='attachment-post-thumbnail wp-post-image' height='180' 
+src='monica.jpg' width='950'/></div>
+<div class='content_slide'>
+
+</div>
+</div>
+
+
+<div class='colonne'>
+</div>
+
+<div class='colonne'>
+<div class='img_colonne'>
+</div>
+</div>
+</div>
+
+</div><!-- fin colonne -->
+</div>
+
+<!--/header -->
+
+
+
+<ul id='-menu'>
+<li><a href='modawana.html'>الـرئـيـسـيـة</a></li>
+<li><a href='islamiyat.html'>اسـلامـيـات</a>
+
+<ul><a href=''> مواضيع اسلامية متنوعة </a></li></ul>
+<li><a href='mawadi3ama.html'>مواضيع عامة</a>
+<ul>
+<li><a href=' '> مـواضيع عامة و مختلفة</a></li>
+</ul>
+</li>
+<li><a href="khawater.html">خـواطـر</a>
+<ul>
+<li><a href=''> إبداعاتي المتواضعة</a></li>
+</ul>
+</li>
+<li><a href='akhbar.html'>أخـبـار مـتـنـوعـة</a>
+<ul>
+<li>
+<a href=''>أهم الأخبار و المستجدات</a></li>
+</ul>
+</li>
+<li><a href='mokhtarat.html'>مـخـتـارات</a>
+<ul>
+<li>
+<a href=''>عبارات راقت لي</a></li>
+</ul>
+</li>
+
+<li><a href='archif.html'>أرشـيـف </a>
+
+<ul><a href=''> أرشيف المدونة</a></li></ul>
+
+<li><a href='raselni.html'>   راسـلـنـي </a>
+<ul>
+<li>
+<a href=''>أهلا بالملاحظاتكم </a></li>
+</ul>
+</li>
+</ul>
+
+<script language="JavaScript">
+var sizes = new Array("0px", "1px", "2px", "3px", "4px");
+sizes.pos = 0;
+function elast() {
+var el = document.all.elastic;
+if (null == el.direction)
+   el.direction = 1;
+else if ((sizes.pos > sizes.length - 4) || (0 == sizes.pos))
+   el.direction *= -1;
+   el.style.letterSpacing = sizes[sizes.pos += el.direction];
+}
+setInterval('elast()', 100)
+</script>
+
+
+<div id='content-wrapper'>
+
+<div id='main-wrapper'>
+<div class='main section' id='main'>
+
+ <div class="date-outer">
+         
+        
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post'>
+<div class='medium_header'></div>
+<div class='medium_content'></div></div>
+<div class='post-title'>
+
+<h1><font color=#F96>
+ 
+أسباب الإبتداع في الدين</font>
+
+</h1></div>
+
+</div>
+
+<div class='post_date'>
+<div class='post-labels'>
+<div class='tag'>
+
+
+<script language="JavaScript">
+var sizes = new Array("0px", "1px", "2px", "3px", "4px");
+sizes.pos = 0;
+function elast() {
+var el = document.all.elastic;
+if (null == el.direction)
+   el.direction = 1;
+else if ((sizes.pos > sizes.length - 4) || (0 == sizes.pos))
+   el.direction *= -1;
+   el.style.letterSpacing = sizes[sizes.pos += el.direction];
+}
+setInterval('elast()', 100)
+</script>
+
+
+<P>
+<div id='summary8674556496634577957'>
+<div dir="rtl" style="text-align: right;" trbidi="on">
+<div class="separator" style="clear: both; text-align: center;">
+</div><div class="separator" style="clear: both; text-align: center;">
+<img src="islamiyat1.jpg" height="378" width="640" />
+</div><br /><div class="separator" style="clear: both; text-align: 
+center;"></div><div class="separator" style="clear: both; text-align: center;"><b>
+
+
+1-ظن طوائف من الناس أن الدين محتاج إلى ذلك ،
+والأمر ليس كذلك ، فإن الله تعالى يقول 
+
+{ الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الإِسْلاَمَ دِينًا } (3) سورة المائدة
+
+<br>
+
+2-إتباع المتشابه 
+
+ومعنى المتشابه : 
+
+" ماأشكل معناه ، ولم يبين مغزاه " 
+
+ومن ترك محكمات الشريعة وقصد متشابهاتها استطاع أن يستدل على إسقاط الواجبات بأدلة من الكتاب والسنة ، كما يستطيع أن يبيح المحرمات بأدلة من الكتاب والسنة أيضا ً ، ولاعجب في ذلك أبداً ، إذ إن ماهو أعظم من ذلك يُمكن أن يقع ، فيستطيع صاحب الشبهة أن يبيح الكفر للناس ، ويشرع لهم الشرك بالله تعالى ، ويستطيع أن يجعل الإيمان كفر 
+وحال هؤلاء لايخفى على كثير من الناس فمنهم من يجيزون التحاكم إلى الطاغوت ومنهم من يجادل عن أهل التوقف ، 
+وغيرهم من طوائف أهل الشرك والإلحاد 
+
+<<br>
+3- القول في الدين بغير علم وقبول ذلك من قائله ،
+ويدخل فيه ممارسة الجاهل لأمور الفتوى والتعليم ، وقبول ذلك منه ، قال تعالى في تحريم ذلك 
+
+{قُلْ إِنَّمَا حَرَّمَ رَبِّيَ الْفَوَاحِشَ مَا ظَهَرَ مِنْهَا وَمَا بَطَنَ وَالإِثْمَ وَالْبَغْيَ بِغَيْرِ الْحَقِّ وَأَن تُشْرِكُواْ بِاللّهِ مَا لَمْ يُنَزِّلْ بِهِ سُلْطَانًا وَأَن تَقُولُواْ عَلَى اللّهِ مَا لاَ تَعْلَمُونَ} (33) سورة الأعراف
+
+قال ابن القيم رحمه الله تعالى في قوله سبحانه 
+
+{ وَأَن تَقُولُواْ عَلَى اللّهِ مَا لاَ تَعْلَمُونَ} قال : 
+
+" فليس في أجناس المحرمات أعظم عند الله منه ، ولا أشد إثماً ، وهو أصل الشرك ، والكفر ، وعليه اسست البدع ، فكل بدعة مضلة في الدين ، أساسها القول على الله بلا علم " انظر مدارج السالكين 1/372
+
+<br>
+4-إتباع الهوى 
+
+إن فساد الدين يقع بالاعتقاد بالباطل، أو بالعمل بخلاف الحق 
+"فالأول البدع، والثاني اتباع الهوى، وهذان هما أصل كل شر وفتنة وبلاء، وبهما كُذِّبت الرسل، وعُصى الرب، ودُخلت النار، وحلت العقوبات" 
+ولذلك ما ذكر الله الهوى في كتابه إلا على سبيل الذم ، وأمر بمخالفته، وبين أن العبد إن لم يتبع الحق والهدى، اتبع هواه.
+
+قال تعالى :
+
+( فَإِنْ لَمْ يَسْتَجِيبُوا لَكَ فَاعْلَمْ أَنَّمَا يَتَّبِعُونَ أَهْوَاءَهُمْ وَمَنْ أَضَلُّ مِمَّنِ اتَّبَعَ هَوَاهُ بِغَيْرِ هُدىً مِنَ اللَّهِ) ( القصص:50 ) ،
+
+وقال تعالى: 
+( وَلَوْشِئْنَا لَرَفَعْنَاهُ بِهَا وَلَكِنَّهُ أَخْلَدَ إِلَى الْأَرْضِ وَاتَّبَعَ هَوَاهُ فَمَثَلُهُ كَمَثَلِ الْكَلْبِ إِنْ تَحْمِلْ عَلَيْهِ يَلْهَثْ أَوْ تَتْرُكْهُ يَلْهَثْ ذَلِكَ مَثَلُ الْقَوْمِ الَّذِينَ كَذَّبُوا بِآياتِنَا فَاقْصُصِ الْقَصَصَ لَعَلَّهُمْ يَتَفَكَّرُونَ ( ( الأعراف:176 )
+
+
+
+نسأل الله عز وجل أن يجعلنا من أهل الإتباع وأن يُجنبنا أهل الإبتداع حرب ضدها.
+</b></div> <br><hr border:3>
+
+
+
+<div class='post-title'>
+
+<h1><font color=#F96>
+تزكية النفس</font>
+
+</h1></div>
+
+
+<P>
+<div id='summary8674556496634577957'>
+<div dir="rtl" style="text-align: right;" trbidi="on">
+<div class="separator" style="clear: both; text-align: center;">
+</div><div class="separator" style="clear: both; text-align: center;">
+<img src="islamiyat2.jpg" height="378" width="640" />
+</div><br /><div class="separator" style="clear: both; text-align: 
+center;"></div><div class="separator" style="clear: both; text-align: center;"><b>
+إن لتزكية النفس آثاراً عظيمة على الفرد والمجتمع، والرجل المسلم والمرأة المسلمة من أهم أفراد المجتمع المسلم؛ ففي صلاحهما وتزكيتها صلاح للمحيطين بهم من زوج وولد أو أخ وأخت..وغيرهم، ومن هنا أردت أن أبين شيئاً من آثار التزكية وثمارها..
+
+
+من أهم ثمرات التزكية:
+
+*حلاوة الإيمان.
+
+وقد روى البخاري ومسلم عن رسول الله صلى الله عليه وسلم قال: "ثلاث من كنَّ فيه وجد بهن حلاوة الإيمان:
+أن يكون الله ورسوله أحبَّ إليه ممَّا سواهما، وأن يحب المرء لا يحبه إلا لله، وأن يكره أن يعود في الكفر بعد إذ أنقذه الله منه كما يكره أن يقذف في النار".
+
+وقد تحدث ابن تيمية عن هؤلاء المحبين فقال:
+"هؤلاء هم الذين يطلبون لذة النظر إلى وجهه الكريم سبحانه، ويتلذذون بذكره ومناجاته، ويكون ذلك لهم أعظم من الماء للسمك، حتى لو انقطعوا عن ذلك، لوجدوا من الألم ما يطيقون".
+
+
+*السعادة الأكيدة في الدنيا والآخرة،
+
+وهذه السعادة نور تشع آثاره على الحياة بجميع مجالاتها، وتقرّ به العين، فيشرق القلب بنور الإيمان، وتشرق معه جميع الأعضاء والجوارح، وقد قال ابن عباس ـ رضي الله عنهما ـ: "إنَّ للحسنة نوراً في القلب، وضياءً في الوجه، وسعة في الرزق، ومحبة في قلوب الخلق، وإنَّ للسيئة لظلمة في القلب، وسواداً في الوجه، ووهناً في البدن، وضيقاً في الرزق، وبغضاً في قلوب الخلق".
+
+
+ومن أبرز ثمرات السعادة :
+
+ـ الإخلاص الكامل لله عزّ وجل.
+ـ الخشوع في العبادات.
+ـ كراهية المعاصي والنفور منها.
+
+ومن الثمرات العظيمة الأخرى الناتجة عن السعادة:
+
+
+*عزة النفس.
+
+قال تعالى:
+{مَنْ كَانَ يُرِيدُ الْعِزَّةَ فَلِلَّهِ الْعِزَّةُ جَمِيعًا...} (فاطر:10)،
+وقال سبحانه: {الَّذِينَ يَتَّخِذُونَ الْكَافِرِينَ أَوْلِيَاءَ مِنْ دُونِ الْمُؤْمِنِينَ أَيَبْتَغُونَ عِنْدَهُمُ الْعِزَّةَ فَإِنَّ الْعِزَّةَ لِلَّهِ جَمِيعًا} (النساء: 139).
+وقال عمر بن الخطاب رضي الله عنه: "إنا كنَّا أذلَّ قوم فأعزَّنا الله بالإسلام فمهما ابتغينا العزة بغيره أذلَّنا الله".
+
+
+*غنى النفس:
+
+وقد قال عليه السلام: 
+"ليس الغني عن كثرة العَرَض ولكن الغنى غنى النفس" (أخرجه مسلم).
+وقال عليه السلام: " ومن كانت الدنيا همَّه فرَّق الله عليه أمره وجعل فقره بين عينيه، ولم يأته من الدنيا إلا ما كتب له، ومن كانت الآخرة نيته جمع الله له أمره، وجعل غناه في قلبه، وأتته الدنيا وهي راغمة" 
+(أخرجه الترمذي وصححه الألباني).
+
+
+* سكينة النفس:
+
+ومن أبرزها الصلاة. قال تعالى:
+{إِنَّ الْإِنْسَانَ خُلِقَ هَلُوعًا* إِذَا مَسَّهُ الشَّرُّ جَزُوعًا* وَإِذَا مَسَّهُ الْخَيْرُ مَنُوعًا* إِلَّا الْمُصَلِّينَ*الَّذِينَ هُمْ عَلَى صَلَاتِهِمْ دَائِمُونَ }
+(المعارج:19 ـ 23).
+وكذلك ذكر الله. قال تعالى: 
+{الَّذِينَ آمَنُوا وَتَطْمَئِنُّ قُلُوبُهُمْ بِذِكْرِ اللَّهِ أَلا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ} (الرعد:28).
+
+قال ابن القيِّم عن هذه السكينة:
+"هي حياة للقلب، ونور يستنير به، ويقظة له، وقوة تشدّ من عزمه، وتثبته عند الشدائد، وتضبط النفس عند جزعها وهلعها، ولذلك يزداد المؤمن بالسكينة إيماناً مع إيمانه".
+
+
+*سمو النفس وعلو الهمة:
+
+قال رسول الله صلى الله عليه وسلم:
+"إنَّ الله يحب معالي الأمور وأشرافها ويكره سفاسفها" (رواه الطبراني وصححه الألباني).
+
+
+*حسن الخلق:
+
+قال صلى الله عليه وسلم: "إنَّ من خياركم أحسنكم أخلاقاً"
+وقال كذلك: 
+"ما من شيء في الميزان أثقل من حسن الخلق"
+(رواه أحمد وأبوداود وصححه الألباني).
+.
+</b></div><br><hr border:3>
+
+
+<script type='text/javascript'>createSummaryAndThumb("summary8674556496634577957");
+</script>
+</P>
+
+<div class='clear'></div>
+</div>
+</div>
+<div class='medium_content_footer_top'></div>
+<div class='post-footer'>
+
+
+
+</div>
+
+
+
+<div class='post-footer'>
+</div>
+
+
+
+
+
+
+
+<span class='post-location'>
+</span>
+</div>
+<div class='post-footer'>
+</div>
+<div class='medium_content_footer_bottom'></div>
+</div>
+</div>
+
+</div></div>
+</div>
+
+
+
+
+<script type="text/javascript">window.___gcfg = {'lang': 'ar'};</script>
+</div></div>
+</div>
+<div id='sidebar-wrapper'>
+<div class='widget' id='searchf'>
+<div class='widget-content'>
+
+
+</div>
+
+
+</br>
+
+
+<h2><font color=pink>أهلا و سهلا بكم
+</font></h2>
+
+
+<div class="textwidget"><marquee direction="up" width="300" onmouseover="this.stop()" 
+scrollamount="4" onmouseout="this.start()" height="200" align="left"><br /> 
+
+<img border="0" 
+ width="300" src="a.jpg" 
+height="250" />
+<br/>
+
+
+<img   width="300" src="b.jpg" height="200" />
+<br/>
+ 
+<img border="0" 
+ width="300" src="c.jpg" height="200" >
+<br/>
+
+<img border="0" width="300" src="d.jpg" 
+height="200" /></a>
+<br/>
+
+
+<img border="0"  width="300" src="e.jpg" 
+height="200" /></a>
+<br/>
+
+
+
+<p/></p></marquee></div>
+
+
+                </div><br>
+
+<h2><font color=pink>صفحتي على الفيسبوك
+</font></h2>
+
+<div class='widget-content popular-posts'>
+<a href="https://www.facebook.com/zaineb.mazouz.7"><img src="facebook.jpg"></a><br><br>
+<h2><font color=pink>قناتي على اليوتيوب
+</font></h2>
+<a href="https://www.youtube.com/channel/UCP9B56x4MDRULPlUTPWxJxw"><img src="youtube.jpg" 
+width=300 height=200></a><br><br>
+
+<div class='sidebar section' id='sidebar'><div class='widget PopularPosts' 
+id='PopularPosts1'>
+
+<h2><font color=pink>مواقع صديقة
+</font></h2>
+<ul>
+<li>
+<a href="http://ataliba-3afwa-allah.blogspot.com"><center><b><h3>مدونة الطالبة عفو الله</h3></b></center></a>
+</li>
+<li>
+<a href="http://ila-7abibayn.blogspot.com/"><center><b><h3> مدونة إلى حبيبين</h3></b></center></a>
+</li>
+</ul><br><br>
+
+</div>
+
+
+
+
+<div class='clear'></div>
+
+<div class='clear'></div>
+</div>
+
+
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+
+<div class='clear'></div>
+<div class='clear'></div>
+
+</div>
+</div>
+</div>
+
+
+<div id='lower'>
+<div id='lower-wrapper'></div>
+<div id='footer-bg'>
+<div id='footer'>
+
+جميع الحقوق محفوظة&#169; 2015 مدونة مزيوزة 
+
+
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>
