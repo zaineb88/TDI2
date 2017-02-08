@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT  Articles (titre,contenu, bibliographie)>
+<!ELEMENT  contenu (paragraphes*)>
+<!ELEMENT  paragraphes (((mots?)*,(expressions?)*),références*)>
+<!ELEMENT bibliographie (siteweb,ouvrage) >
+<!ELEMENT siteweb (nom,adressedesite) >
+<!ELEMENT ouvrage (titreO,auteurs,datedeparution,éditeur)>
+<!ELEMENT  titre  (#PCDATA) >
+<!ELEMENT  mots  (#PCDATA) >
+<!ELEMENT  expressions  (#PCDATA) >
+<!ELEMENT  références  (#PCDATA) >
+<!ELEMENT  nom  (#PCDATA) >
+<!ELEMENT  adressedesite  (#PCDATA) >
+<!ELEMENT  titreO  (#PCDATA) >
+<!ELEMENT  auteurs  (#PCDATA) >
+<!ELEMENT  datedeparution  (#PCDATA) >
+<!ELEMENT  éditeur  (#PCDATA) >

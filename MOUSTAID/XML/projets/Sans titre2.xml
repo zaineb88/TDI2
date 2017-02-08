@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblio[
+<!ELEMENT biblio (livre)*>
+<!ELEMENT livre (titre, auteur, nb_pages)>
+<!ATTLIST livre
+type (roman | nouvelles | poemes | théâtre) #IMPLIED
+lang CDATA "fr"
+>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT auteur (#PCDATA)>
+<!ELEMENT nb_pages (#PCDATA)>
+]>
+<biblio>
+    <livre type="roman" lang="fr">
+        <titre>oki</titre>
+        <auteur>okieur</auteur>
+        <nb_pages>350</nb_pages>
+    </livre>
+    <livre>
+        <titre>yes</titre>
+        <auteur>yesman</auteur>
+        <nb_pages>400</nb_pages>
+    </livre>
+   
+</biblio>

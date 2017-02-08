@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblio[
+<!ELEMENT biblio (livre)*>
+<!ELEMENT livre (titre, auteur, nb_pages)>
+<!ATTLIST livre
+type (roman | nouvelles | poemes | théâtre) #IMPLIED
+lang CDATA "fr"
+>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT auteur (#PCDATA)>
+<!ELEMENT nb_pages (#PCDATA)>
+]>
+<biblio>
+    <livre type="nouvelles" lang="fr">
+        <titre>aa</titre>
+        <auteur>aa</auteur>
+        <nb_pages>aa</nb_pages>
+    </livre>
+    <livre type="poemes" lang="fr">
+        <titre>bb</titre>
+        <auteur>bb</auteur>
+        <nb_pages>bb</nb_pages>
+    </livre>
+    <livre type="roman" lang="fr">
+        <titre>cc</titre>
+        <auteur>cc</auteur>
+        <nb_pages>cc</nb_pages>
+    </livre>
+    <livre type="théâtre" lang="fr">
+        <titre>dd</titre>
+        <auteur>dd</auteur>
+        <nb_pages>dd</nb_pages>
+    </livre>
+</biblio>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblio SYSTEM "dtd1.dtd">
+
+
+<biblio>
+    <livre type="nouvelles" lang="fr">
+        <titre>aa</titre>
+        <auteur>aa</auteur>
+        <nb_pages>aa</nb_pages>
+    </livre>
+    <livre type="poemes" lang="fr">
+        <titre>bb</titre>
+        <auteur>bb</auteur>
+        <nb_pages>25</nb_pages>
+    </livre>
+    <livre type="roman" lang="fr">
+        <titre>cc</titre>
+        <auteur>cc</auteur>
+        <nb_pages>30</nb_pages>
+    </livre>
+    <livre type="théâtre" lang="fr">
+        <titre>dd</titre>
+        <auteur>dd</auteur>
+        <nb_pages>40</nb_pages>
+    </livre>
+</biblio>
+

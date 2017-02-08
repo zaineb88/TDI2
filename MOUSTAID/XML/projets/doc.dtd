@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT doc (title?, author?, chapter+)>
+<!ELEMENT chapter (title, (para|note)*, section*)>
+<!ELEMENT section (title, (para|note)*)>
+<!ELEMENT title (#PCDATA|emph)*>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT para (#PCDATA|emph)*>
+<!ELEMENT note (#PCDATA|emph)*>
+<!ELEMENT emph (#PCDATA|emph)*>
+<!ATTLIST chapter
+num ID #REQUIRED
+visible (true | false) "true">

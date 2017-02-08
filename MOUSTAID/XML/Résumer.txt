@@ -1,0 +1,78 @@
+XML extensible markup language (langage de balise extensible)
+
+XML est un sous ensemble, une simplification de SGML
+
+SGML standar / XML plus simplifier 
+
+XML utiliser seulment les donnée sans style
+
+XML permet de séparer le contenu de la présentation 
+
+XML kayetkewin mn :
+prologue : < ?XML version="1.0"?>   ou <!DOCTYPE ...>
+arbre : <article> ....
+commantaire: <!-- ....-->
+
+toutes les balises doit etre fermer
+
+les style dima mefsolin 3la XML w kaykono f XSL li hiya b7al CSS w kate9dar tkhadim 7ta CSS brasha 
+w kayen 7ta XSLT w hadi kate9dar t7awel style dyal html li style dyal xml
+
+minuslcule machi b7al majuscule 
+
+espace de nom howa matal chi groupe khadame 3la chi projet kol wa7ed kaydir espace de nom dyali 
+bach wakha chi joj ydeclariw nafs variable mayew9a3ch mochkil
+
+
+&lt = <     
+
+&amp = & 
+<![CDATA[.....]]>    bach tkhali dekchi li lwest kef ma howa
+
+<élément attribut="valeur"/>
+
+
+il ya deux maniére de travail: DTD - XML Sheme
+
+DTD: difinition de type de donnée
+
+kayen DTD interne w DTD externe
+
+w kayen DTD privé(katkon f internet url) w kayen public (uri)
+
+DTD <DOCTYPE elt.racine..."..." "...">
+
+-----------element-----------
+
+,= et 
+|=ou
+
+?= 0 ou 1
++=1 ou bizaf
+*= 0 ou bizaf
+
+----------attribut------------------
+
+( emph | PCDATA)* = hadi te9dar tel9ahom bjoj 7it mara lewla matalan khtar emph 
+w mara tanya khtar PCDATA
+#PCDATA= chaine de caractère ( element)
+CDATA ( atribut)
+# IMPLIED= ye9dar ykon ye9dar maykonch
+#REQUIRED=obligatoire
+
+----------------------
+--XML--
+ENTITY car"caractères"(b7al ila kadeklari car hiya caractère)
+&car;   (meli jina hna w 9olnalo car; ya3ni rah 3ayektiblik caractère kamla)
+ENTITY
+--DTD--
+ENTITY % car"caractères"
+% car;
+
+
+
+attlist = la liste des attributs
+
+---------------
+
+shema XML howa b7al dtd kaykon m3a9ad b7ayt kaye7tarem 9awa3id dyal XML (.xsd)

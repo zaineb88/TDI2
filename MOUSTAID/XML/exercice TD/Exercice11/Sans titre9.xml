@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LesArticles SYSTEM "Sans titre6.dtd">
+<LesArticles>
+    <Articles>
+        <titre>mmmm</titre>
+        <contenu>
+            <paragraphes>
+                <mots>aaaa</mots>
+                <expressions>zzzz</expressions>
+                <références>eeee</références>
+            </paragraphes>
+            <paragraphes>
+                <mots>rrrrr</mots>
+                <expressions>ttttttt</expressions>
+                <références>yyyyyy</références>
+            </paragraphes>         
+        </contenu>
+        <bibliographie>
+            <siteweb>
+                <nom>ooooo</nom>
+                <adressedesite>eeeeeee</adressedesite>
+            </siteweb>
+        </bibliographie>
+    </Articles>
+</LesArticles>

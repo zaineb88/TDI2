@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bouteilles>
+    
+    <bouteille>
+        <marque>Cristaline</marque>
+        <capacite>150 cl</capacite>
+        <comoposition>
+            <ionspositifs>
+                <ionspositif name="calcium" quantite="71 mg/l"></ionspositif>
+                <ionspositif name="magnesium" quantite="5,5mg/l"></ionspositif>
+            </ionspositifs>
+            <ionsnegatifs>
+            <ionsnegatif name="chlorure" quantite="20mg/l"></ionsnegatif>
+            <ionsnegatif name="nitrate" quantite="1mg/l"></ionsnegatif>
+            <ionsnegatif name="fer" quantite="traces"></ionsnegatif>
+            </ionsnegatifs>
+        </comoposition>
+        <source>
+            <ville>st-Cyr La Source</ville>
+            <departement>Loiret</departement>
+        </source>
+        <code_barre>3274080005003</code_barre>
+        <ph>7.45</ph>
+    </bouteille>
+    
+    
+    <bouteille>
+        <marque>Cristaline</marque>
+        <capacite>50 cl</capacite>
+        <comoposition>
+            <ionspositifs>
+                <ionspositif name="calcium" quantite="98 mg/l"></ionspositif>
+                <ionspositif name="magnesium" quantite="4mg/l"></ionspositif>
+            </ionspositifs>
+            <ionsnegatifs>
+                <ionsnegatif name="chlorure" quantite="3,6mg/l"></ionsnegatif>
+                <ionsnegatif name="nitrate" quantite="2mg/l"></ionsnegatif>
+            </ionsnegatifs>
+        </comoposition>
+        <source>
+            <ville>Aurèle</ville>
+            <departement>Les Alpes Maritimes</departement>
+        </source>
+        <code_barre>3268840001008</code_barre>
+        <ph>7,4</ph>
+    </bouteille>
+    
+    <bouteille>
+        <marque>Volvic</marque>
+        <capacite>50 cl</capacite>
+        <comoposition>
+            <ionspositifs>
+                <ionspositif name="calcium" quantite="11,5 mg/l"></ionspositif>
+                <ionspositif name="magnesium" quantite="8,0mg/l"></ionspositif>
+            </ionspositifs>
+            <ionsnegatifs>
+                <ionsnegatif name="chlorure" quantite="13,5mg/l"></ionsnegatif>
+                <ionsnegatif name="nitrate" quantite="6,3mg/l"></ionsnegatif>
+            </ionsnegatifs>
+        </comoposition>
+        <source>
+            <ville>Volvic</ville>
+        </source>
+        <code_barre>3057640117008.</code_barre>
+        <ph>7</ph>
+    </bouteille>
+    </bouteilles>
+                

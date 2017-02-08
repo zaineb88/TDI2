@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bouteilles>
+    <bouteille>
+    <marque>Cristaline</marque>
+    <capacite>150 cl</capacite>
+    <composition>
+        <ionspositifs>
+            <ionpositif  name= "calcium" quantite="71 mg/l" > </ionpositif>
+            <ionpositif name="magnesium" quantite="5,5mg/l"></ionpositif> 
+        </ionspositifs>
+        <ionsnegatifs>
+            <ionnegatif name="chlorure" quantite="20mg/l" ></ionnegatif>
+            <ionnegatif name="nitrate" quantite="1mg/l"></ionnegatif>
+            <ionnegatif name="fer" quantite="traces"></ionnegatif>
+        </ionsnegatifs>
+    </composition>
+    <source>
+        <ville>St-Cyr la Source</ville>
+        <departement>Lotret</departement>
+    </source>
+    <code_barre>3274080005003</code_barre>
+    </bouteille>
+    <bouteille>
+        <marque>Cristaline</marque>
+        <capacite>150 cl</capacite>
+        <composition>
+            <ionspositifs>
+                <ionpositif  name= "calcium" quantite="98 mg/l" > </ionpositif>
+                <ionpositif name="magnesium" quantite="4 mg/l"></ionpositif> 
+            </ionspositifs>
+            <ionsnegatifs>
+                <ionnegatif name="chlorure" quantite="3,6mg/l" ></ionnegatif>
+                <ionnegatif name="nitrate" quantite="2mg/l"></ionnegatif>
+            </ionsnegatifs>
+        </composition>
+        <source>
+            <ville>Aurelle</ville>
+            <departement>Les alpes Maritimes</departement>
+        </source>
+        <code_barre>3268840001008</code_barre>
+    </bouteille>
+    <bouteille>
+        <marque>Volvic</marque>
+        <capacite>150 cl</capacite>
+        <composition>
+            <ionspositifs>
+                <ionpositif  name= "calcium" quantite="11,5 mg/l" > </ionpositif>
+                <ionpositif name="magnesium" quantite="8 mg/l"></ionpositif> 
+            </ionspositifs>
+            <ionsnegatifs>
+                <ionnegatif name="chlorure" quantite="13,5mg/l" ></ionnegatif>
+                <ionnegatif name="nitrate" quantite="6,3mg/l"></ionnegatif>
+                <ionnegatif name="Silice" quantite="traces"></ionnegatif>
+            </ionsnegatifs>
+        </composition>
+        <source>
+            <ville>Volvic</ville>
+            <departement>Les alpes Maritimes</departement>
+        </source>
+        <code_barre>3057640117008</code_barre>
+    </bouteille>
+</Bouteilles>

@@ -1,0 +1,9 @@
+Exercice 5:
+
+li na9sin homa: authore f doc - title f selection -para ou note f chapitre
+
+Exercice 6:
+
+1:8    (doc-chapitre-section-title-author-para-note-emph)
+
+2:2  (num - visible)

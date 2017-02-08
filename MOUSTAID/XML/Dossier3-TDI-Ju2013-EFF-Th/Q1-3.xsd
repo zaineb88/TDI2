@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="stagiare" >
+        <xs:complexType >
+            <xs:sequence>
+                <xs:element name="cours_de_soir" minOccurs="0"  maxOccurs="unbounded">
+                   <xs:complexType>
+                       <xs:sequence>
+                           <xs:element name="filere">
+                               <xs:complexType>
+                                   <xs:sequence>
+                                       <xs:element name="employe">
+                                           <xs:complexType>
+                                               <xs:sequence >
+                                                 
+                                                   <xs:element name="societe" type="xs:string"></xs:element>
+                                                   <xs:element name="matricule" type="xs:string"></xs:element>
+                                                   <xs:element name="datedebut" type="xs:date"></xs:element>
+                                                   <xs:element name="grade" type="xs:string"></xs:element>
+                                               </xs:sequence>
+                                                  
+                                           </xs:complexType>
+                                       </xs:element>
+                                   </xs:sequence>
+         <xs:attribute name="nom" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="nombre_stagiare" type="xs:int" use="required"></xs:attribute>
+                               </xs:complexType>
+                           </xs:element>
+                       </xs:sequence>
+                   </xs:complexType>
+                </xs:element>
+                
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    </xs:schema>

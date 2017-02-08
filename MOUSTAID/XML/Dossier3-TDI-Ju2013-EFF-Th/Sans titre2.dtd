@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT stagiers (cours_du_soir?,Cours_du_jour,formatiom_qualificatiom?)>
+<!ELEMENT cours_du_soir (filiere*)>
+<!ELEMENT filiere (employee+)>
+        <!ATTLIST filiere Nom  ID #REQUIRED  
+           NombrePersonne CDATA  #IMPLIED>   
+<!ELEMENT employee (societe,matricule,dateDubet,grade)>
+<!ELEMENT societe (#PCDATA)>
+<!ELEMENT matricule (#PCDATA)>
+<!ELEMENT dateDubet (#PCDATA)>
+<!ELEMENT grade (#PCDATA)>
+<!ELEMENT Cours_du_jour (filieres)>
+<!ELEMENT filieres (stagier+,stagier+)>
+         <!ATTLIST filieres Nom  ID #IMPLIED  
+           NombrePersonne CDATA  #IMPLIED> 
+<!ELEMENT stagier (n_insription,nom,prenom,age)>
+<!ELEMENT n_insription (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT formatiom_qualificatiom (formatiom)>
+<!ELEMENT formatiom (participant)>
+<!ELEMENT participant (nome,tel)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>

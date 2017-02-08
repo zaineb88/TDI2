@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE doc SYSTEM "doc.dtd">
+<doc>
+    <chapter num="ch1">
+        <title>Chapter Title</title>
+        <section>
+            <title>Section Title</title>
+            <note>This is a note.</note>
+            <para>This is a test.</para>
+            <para>This is <emph>another</emph> test.</para>
+            <para>This is <emph>another</emph> test.</para>
+            <para>This is <emph>another</emph> test.
+                This is <emph>another</emph> test.
+                This is <emph>another</emph> test.</para>
+            <note>This is a note.</note>
+        </section>
+    </chapter>
+    <chapter num="ch2" visible= "false">
+        <title>Appendix</title>
+    </chapter>
+</doc>

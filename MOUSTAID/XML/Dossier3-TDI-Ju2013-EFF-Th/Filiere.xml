@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stagiers SYSTEM "Sans titre2.dtd">
+<stagiers>
+    <cours_du_soir>
+        <filiere  Nom="cccc"  NombrePersonne="4">
+            <employee>
+                <societe>SSTI</societe>
+                <matricule>ER6530J</matricule>
+                <dateDubet>2015-2-5</dateDubet>
+                <grade>44566</grade>
+            </employee>
+        </filiere>      
+    </cours_du_soir>
+    <Cours_du_jour>
+        <filieres  Nom="jjjjjj"  NombrePersonne="23">
+            <stagier>
+                <n_insription>5</n_insription>
+                <nom>Tariaf</nom>
+                <prenom>Aouatif</prenom>
+                <age>21</age>
+            </stagier>
+            <stagier>
+                <n_insription>5</n_insription>
+                <nom>Tariaf</nom>
+                <prenom>Aouatif</prenom>
+                <age>21</age>
+            </stagier>
+
+            
+        </filieres>
+    </Cours_du_jour>
+    <formatiom_qualificatiom>
+        <formatiom >
+            <participant>
+                <nome>ffffffffff</nome>
+                <tel>0699665544</tel>
+            </participant>
+            
+        </formatiom>
+    </formatiom_qualificatiom>
+    
+</stagiers>
